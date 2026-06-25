@@ -1,636 +1,667 @@
 <!DOCTYPE html>
 <html lang="en"> 
 <head>
-	<title>Agri AI 2026</title>	
-	<!-- Meta -->
+	<title>PerAgent 2027</title>	
 	<meta charset="utf-8">
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-	<meta name="description" content="The first International Workshop on AI in Agriculture (Agri AI)">
+	<meta name="description" content="First International Workshop on Pervasive Agentic Systems and Multimodal Foundation Models (PerAgent)">
 	<link rel="shortcut icon" href="favicon.ico"> 
 	
-	<!-- Google Font -->
 	<link href="https://fonts.googleapis.com/css?family=Montserrat:600,700,800|Roboto:300,400,700&display=swap" rel="stylesheet">
 	
-	<!-- FontAwesome JS-->
 	<script defer src="assets/fontawesome/js/all.min.js"></script>
-
-	<!-- Theme CSS -->  
 	<link id="theme-style" rel="stylesheet" href="assets/css/theme.css">
-	
-<style>
-#wrap {
-    background: #e7e7e7;
-    padding: 5%;
-    text-align: center;
-    width: 80%;
-}
+	<style>
+		/* Custom Professional Overrides */
+		body {
+			color: #334155;
+		}
 
-#left, #right {
-    background: #ccc;
-    display: inline-block;
-    padding: 2%;
-}
-</style>	
+        .hero-block {
+            background-image: url('');
+            background-size: cover;
+        }
 
-
+		.section-heading {
+			font-family: 'Montserrat', sans-serif;
+			color: #0f172a;
+			font-weight: 800;
+			letter-spacing: -0.5px;
+		}
+		/* Premium Card Lift & Border Transition */
+		.hover-card {
+			transition: all 0.35s cubic-bezier(0.4, 0, 0.2, 1);
+			text-decoration: none !important;
+			display: block;
+			color: inherit;
+			border: 1px solid #e2e8f0 !important;
+			border-radius: 12px !important;
+			overflow: hidden;
+			background: #ffffff;
+		}
+		.hover-card:hover {
+			transform: translateY(-6px);
+			box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.05), 0 10px 10px -5px rgba(0, 0, 0, 0.04) !important;
+			border-color: #0091ca !important;
+		}
+		.hover-card .card-title, .hover-card h5, .hover-card h6 {
+			transition: color 0.2s ease;
+		}
+		.hover-card:hover .card-title, .hover-card:hover h5, .hover-card:hover h6 {
+			color: #0091ca !important;
+		}
+		
+		/* Styled Accent Line for Differentiators */
+		.diff-card {
+			border-top: 4px solid #0f172a !important;
+		}
+		.diff-card:hover {
+			border-top: 4px solid #0091ca !important;
+		}
+        section.section {
+            padding-bottom: 80px !important; 
+        }
+		.benefits-list ul { margin-bottom: 1.5rem; }
+	</style>
 </head> 
-
 <body>    
-	<header id="header" class="header fixed-top">	    
+	<header id="header" class="header fixed-top">    
 		<div class="branding">
 			<div class="container-fluid">
 				<nav class="main-nav navbar navbar-expand-lg">
 					<div class="site-logo"> 
+						<a class="navbar-brand scrollto" href="#hero-block" style="font-family: 'Montserrat', sans-serif; font-weight: 800; color: #fff;">PerAgent 2027</a>
 					</div>
 					<button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navigation" aria-controls="navigation" aria-expanded="false" aria-label="Toggle navigation">
 						<span class="navbar-toggler-icon"></span>
 					</button>
 					
-					<div id="navigation" class="navbar-collapse collapse  justify-content-lg-end me-lg-3">
+					<div id="navigation" class="navbar-collapse collapse justify-content-lg-end me-lg-3">
 						<ul class="nav navbar-nav">
-							
 							<li class="nav-item"><a class="nav-link scrollto" href="#about">About</a></li>
-							<li class="nav-item"><a class="nav-link scrollto" href="#cfp">Call for Paper</a></li>
+							<li class="nav-item"><a class="nav-link scrollto" href="#cfp">Call for Papers</a></li>
 							<li class="nav-item"><a class="nav-link scrollto" href="#program">Program</a></li>
-							<li class="nav-item"><a class="nav-link scrollto" href="#speakers">Speakers</a></li>
-							<li class="nav-item"><a class="nav-link scrollto" href="#organization">Organization</a></li>
-						</ul><!--//nav-->
-					</div><!--//navabr-collapse-->
-
-				</nav><!--//main-nav-->
-				
-			</div><!--//container-->
-		</div><!--//branding-->
-	</header><!--//header-->
-	
+							<li class="nav-item"><a class="nav-link scrollto" href="#organizers">Organizers</a></li>
+							<li class="nav-item"><a class="nav-link scrollto" href="#tpc">Technical Committee</a></li>
+						</ul></div></nav></div></div></header>
+						
 	<div id="hero-block" class="hero-block">
-		<div id="hero-carousel" class="hero-carousel carousel slide carousel-fade" data-ride="carousel">
-			<div class="carousel-inner">
-				<div class="carousel-item-1 carousel-item active">
-				</div>
-				<div class="carousel-item-2 carousel-item">
-				</div>
-				<div class="carousel-item-3 carousel-item">
-				</div>
-			</div>
-		</div>
 		<div class="hero-block-mask"></div>
 		<div class="container">
-			<div class="hero-text-block" style="max-width: 700px;">
-				<h1 class="hero-heading mb-2">Agri AI 2026</h1>
-				<div class="hero-intro mb-4">First International Workshop on AI in Agriculture</div>
-				<div class="hero-intro mb-4">Workshop at <a href="https://aaai.org/conference/aaai/aaai-26/" target="_blank"><font color="white">AAAI 2026</font></a></div>												
-				<div class="hero-meta mb-3"><i class="far fa-calendar-alt me-2"></i> January 26, 2026</div> 
-				<div class="hero-meta mb-3"><i class="fas fa-map-marker-alt mx-2"></i> EXPO, Singapore</div>
-				</div-->
-				</div-->
-			</div><!--//hero-text-block-->
-		</div><!--//container-->
-
-	</div><!--//hero-block-->
-
+			<div class="hero-text-block" style="max-width: 850px;">
+				<h1 class="hero-heading mb-2">PerAgent 2027</h1>
+				<div class="hero-intro mb-4" style="font-size: 1.45rem; line-height: 1.4;">First International Workshop on Pervasive Agentic Systems and Multimodal Foundation Models</div>
+				<div class="hero-intro mb-4">Workshop co-located with <a href="https://percom.org/" target="_blank"><font color="#0091ca">PerCom 2027</font></a></div>												
+				<div class="hero-meta mb-3"><i class="far fa-calendar-alt me-2"></i> To Be Announced</div> 
+			</div>
+        </div>
+    </div>
+	<!-- About Section -->
 	<section id="about" class="about-section section theme-bg-light">
 		<div class="container">
-			<h3 class="section-heading text-center mb-3">About Agri AI 2026</h3>
-			<div class="section-intro mx-auto mb-4">
-				<p>Agriculture is undergoing a rapid transformation driven by digital technologies, including IoT sensors, drones, satellite imagery, and mobile platforms, which generate vast streams of heterogeneous, temporally rich data. These advancements offer unprecedented opportunities for AI to enable smarter, more resilient, and efficient agricultural practices. As climate change increases variability in crop yields, pest outbreaks, and resource availability, traditional agricultural methods are proving inadequate in addressing these challenges. Although AI has started to tackle these issues through applications like crop forecasting, disease detection, and irrigation optimization, many existing solutions remain narrow in focus, difficult to generalize, and often lack scalability and adaptability. Furthermore, important human-centered concerns, such as transparency, fairness, and participatory system design, are often underexplored. The First International Workshop on AI in Agriculture (Agri AI), co-located at AAAI 2026, aims to address these gaps by bringing together researchers and practitioners to advance robust, responsible, and scalable AI methods tailored to real-world agricultural systems.</p>
+			<h3 class="section-heading text-center mb-4">About PerAgent</h3>
+			<div class="section-intro mx-auto mb-3" style="max-width: 900px; text-align: justify; font-size: 1.1rem; line-height: 1.75;">
+				<p>PerAgent focuses on the critical systems-level challenges of transitioning from narrow, single-task edge AI to general-purpose, autonomous AI agents operating in physical environments. Currently, foundation models are trapped in the cloud due to massive computational requirements. This workshop explores how large-scale models such as Large Language Models (LLMs), Vision-Language Models (VLMs), and Multimodal Language Models (MLMs) can be compressed, decentralized, and securely integrated with pervasive sensor networks.</p>
+				<p>A defining feature of pervasive agentic systems is their domain-agnostic architectures. The exact same edge-computing architecture, split learning pipeline, and VLM integration used to fuse IoT telemetry and satellite data for a real-time decision-support system in precision agriculture can be deployed in a clinical setting to fuse wearable sensor streams for continuous patient monitoring. PerAgent investigates the underlying system architecture that remains constant even as the environmental context changes.</p>
 			</div>			
-		</div><!--//container-->
-	</section><!--//about-section-->
-	
+		</div></section>
+
+	<!-- Combined Call for Papers Section (Topics + Community + Uniqueness + Dates) -->
 	<section id="cfp" class="about-section section theme-bg-white">
 		<div class="container">
 			<h3 class="section-heading text-center mb-3">Call for Papers</h3>
-			<a href="FMSust25-CFP.pdf"> 
-				<h5 class="mb-2 text-center mb-3">Agri AI 2026 Call for Papers (PDF)</h5>
-			</a>
-
-			<div class="section-intro mx-auto mb-4">This workshop will cover the following research themes, including but not limited to the topics listed below:</div>
-			<div class="benefits-list text-left mb-3">	
-				<p><strong>Data Foundations</strong></p>
+			<div class="section-intro mx-auto mb-4">This workshop will focus on, but not be limited to, the following systems-level topics:</div>
+			<div class="benefits-list text-left mb-3">
+				<p><strong>Systems-Level Technical Topics</strong></p>
 				<ul class="list-unstyled text-start d-inline-block">
-				<li><i class="fas fa-check-circle me-2"></i>Multi-modal heterogeneous agriculture data collection and fusion (satellites, drones, IoT sensors, camera) </li>
-				<li><i class="fas fa-check-circle me-2"></i>Large-scale, open source, high-quality benchmark datasets for AI in agriculture</li>
-				<li><i class="fas fa-check-circle me-2"></i>Synthetic data generation and simulators to address uncertainty and data/label scarcity </li>				  
-				</ul>
-
-				<p><strong>Decision Intelligence and Scalable AI Models</strong></p>
-				<ul class="list-unstyled text-start d-inline-block">
-				<li><i class="fas fa-check-circle me-2"></i>AI-powered decision support systems for precision farming and resource optimization </li>
-				<li><i class="fas fa-check-circle me-2"></i>Generative AI, foundation models, and transfer learning for agriculture </li>
-				<li><i class="fas fa-check-circle me-2"></i>Edge AI, federated and distributed learning for agriculture </li>				  
-				</ul>
-
-				<p><strong>Applications and Real-World Deployments </strong></p>
-				<ul class="list-unstyled text-start d-inline-block">
-				<li><i class="fas fa-check-circle me-2"></i>AI-driven plant disease and insect detection, yield forecasting, etc.  </li>
-				<li><i class="fas fa-check-circle me-2"></i>Longitudinal study, field validation, and performance benchmarking for real-world case studies</li>
-				<li><i class="fas fa-check-circle me-2"></i>Security, privacy and trustworthiness of AI in agriculture</li>				  
+					<li><i class="fas fa-check-circle me-2"></i>Hardware-software co-design for edge agents</li>
+					<li><i class="fas fa-check-circle me-2"></i>Decentralized and split/federated agentic learning</li>
+					<li><i class="fas fa-check-circle me-2"></i>Multimodal sensor fusion for VLMs/MLMs</li>
+					<li><i class="fas fa-check-circle me-2"></i>Trust, safety, and local overrides for physical actuation</li>
+					<li><i class="fas fa-check-circle me-2"></i>Bandwidth-efficient distributed inference</li>
+					<li><i class="fas fa-check-circle me-2"></i>Cross-domain agent adaptation algorithms</li>
+					<li><i class="fas fa-check-circle me-2"></i>Agentic synchronization across IoT mesh networks</li>
 				</ul>
 			</div><!--//benefits-list-->
-			
+
 			<div class="mb-3">
-				<h4 class="mb-2 text-center mb-3">Submission Guidelines</h4>
-				<div class="section-intro mx-auto mb-4">We invite research papers presenting original results—including deployment experiences and case studies—that have not been published previously and are not under review elsewhere. Papers may be up to 6 pages in length, including figures, tables, and references. All submissions must follow the <a href='https://aaai.org/authorkit26-1/' target='_blank'>AAAI 2026 submission format </a> and be submitted electronically. The workshop will follow a single-blind review process; therefore, authors should include their names and contact details in the paper.</div>
-				<div class="section-intro mx-auto mb-4">Accepted papers will be archived on the workshop website but will not appear in the official AAAI 2026 proceedings. 
-					</strong>Papers of special merit, properly extended, will be considered for possible publication in the <a href="https://www.sciencedirect.com/journal/pervasive-and-mobile-computing" target="_blank">Elsevier’s Pervasive and Mobile Computing (PMC) journal</a>.
-					At least one author of each accepted paper must attend the workshop in person; otherwise, the paper will be withdrawn from the program.</div>
-				<br><br>
+				<h4 class="mb-2 text-center mb-3">Target Community</h4>
+				<div class="section-intro mx-auto mb-4">A primary goal of PerAgent is to bring new interdisciplinary researchers into the PerCom ecosystem who might not traditionally attend a pervasive computing systems conference. We specifically aim to attract and intersect three distinct groups:</div>
+				<div class="benefits-list text-left mb-3">
+					<ul class="list-unstyled text-start d-inline-block">
+						<li><i class="fas fa-check-circle me-2"></i><strong>The AI & Foundation Model Community:</strong> Researchers seeking hardware-software deployment solutions for LLMs and VLMs outside of centralized data centers.</li>
+						<li><i class="fas fa-check-circle me-2"></i><strong>Industry Practitioners & Applied Domain Experts:</strong> Engineers and architects from AgriTech, Digital Health, and Smart Cities who are actively attempting to deploy autonomous agents in the physical field.</li>
+						<li><i class="fas fa-check-circle me-2"></i><strong>The Core Systems & Edge Engineering Community:</strong> Traditional PerCom researchers looking to transition from narrow, single-task ML classifiers to generalized, multi-agent frameworks.</li>
+					</ul>
+				</div><!--//benefits-list-->
 			</div>
-			
+
 			<div class="mb-3">
-				<h4 class="mb-2 text-center mb-3">Submission link</h4>
-				<div class="section-intro mx-auto mb-4">All submissions must be in Adobe Portable Document Format (PDF) format through the OpenReview: <a href="https://openreview.net/group?id=AAAI.org/2026/Workshop/AgriAI" target="_blank">https://openreview.net/group?id=AAAI.org/2026/Workshop/AgriAI</a></div>
-			</div>		
+				<h4 class="mb-2 text-center mb-3">Related Workshops and Uniqueness</h4>
+				<div class="section-intro mx-auto mb-4">Existing workshops often treat edge computing and AI as separate fields. PerAgent explicitly integrates foundation models with pervasive physical systems. We differentiate from existing venues across three axes:</div>
+				<div class="benefits-list text-left mb-3">
+					<ul class="list-unstyled text-start d-inline-block">
+						<li><i class="fas fa-check-circle me-2"></i><strong>Vs. PerCom Workshops (e.g., PeRConAI):</strong> Shifts focus from narrow, single-task classifiers (e.g., TinyML) to the distributed architectures required for generalized, multimodal foundation models.</li>
+						<li><i class="fas fa-check-circle me-2"></i><strong>Vs. Edge/Systems Venues (e.g., EdgeSys/MobiSys):</strong> Moves beyond low-level infrastructure for standard deep learning to the agentic layer, enabling edge LLMs/VLMs to reason and physically actuate.</li>
+						<li><i class="fas fa-check-circle me-2"></i><strong>Vs. Core AI Venues (e.g., NeurIPS/ICML):</strong> Rejects the assumption of infinite cloud compute, focusing strictly on the physical edge bottlenecks (latency, thermal limits, hardware constraints) that pure AI researchers ignore.</li>
+					</ul>
+					<div class="section-intro mx-auto mb-4"><strong>PerAgent Advantage:</strong> We provide a dedicated space to connect traditional IoT systems engineering with modern generative AI deployment.</div>
+				</div><!--//benefits-list-->
+			</div>
 
 			<div class="mb-3">
 				<h4 class="mb-2 text-center mb-3">Important Dates</h4>
 				<div class="benefits-list text-center mb-3">				
 					<ul class="list-unstyled text-start d-inline-block">
-					<li><i class="far fa-calendar-alt me-2"></i><strong>Paper submission: <strike>October 22</strike> November 20, 2025 (AOE)</strong></li>
-						<li><i class="far fa-calendar-alt me-2"></i><strong>Notifications: <strike>November 30</strike> December 8, 2025 (AOE)</strong></li>
-						<li><i class="far fa-calendar-alt me-2"></i><strong>Camera-ready: <strike>December 7</strike> December 26, 2025 (AOE)</strong></li>
-						<li><i class="far fa-calendar-alt me-2"></i><strong>Workshop: January 26, 2026 </strong></li>
+						<li><i class="far fa-calendar-alt me-2"></i><strong>Paper Submission Deadline:</strong> TBA</li>
+						<li><i class="far fa-calendar-alt me-2"></i><strong>Author Notification:</strong> TBA</li>
+						<li><i class="far fa-calendar-alt me-2"></i><strong>Camera-Ready Submission:</strong> TBA</li>
+						<li><i class="far fa-calendar-alt me-2"></i><strong>Workshop Date:</strong> TBA</li>
 					</ul>
 				</div><!--//benefits-list-->
 			</div>
-		</div><!--//container-->		
-	</section><!--//cfp-section-->	
+		</div><!--//container-->
+	</section><!--//cfp-section-->
 
-<section id="program" class="schedule-section section theme-bg-light" style="padding-top: 60px; padding-bottom: 60px;">
-    <div class="container">
-        <h3 class="section-heading text-center mb-5" style="font-weight: 700; margin-bottom: 3rem !important;">Program</h3>
-        
-        <div style="max-width: 900px; margin-left: 0 auto; position: relative; padding-bottom: 20px;">
-		<div style="font-weight: 700;color: #222;">Workshop Room: Conference J</div>
-			
-            <p style="margin-bottom: 40px; color: #6c757d; font-style: italic; font-size: 0.9rem; text-align: left;">
-                *All times are local (Singapore)(UTC+8)
-            </p>
-
-            <div style="position: relative;">
-                <div style="position: absolute; left: 240px; top: 10px; bottom: 0; width: 2px; background-color: #e9ecef; z-index: 1;"></div>
-
-                <div style="display: flex; align-items: flex-start; margin-bottom: 30px; position: relative;">
-                    <div style="flex: 0 0 220px; text-align: right; padding-right: 40px; color: #0091ca; font-weight: 700; font-size: 1.1rem;">8:25 – 8:30</div>
-                    <div style="flex: 0 0 40px; z-index: 2; display: flex; justify-content: center;">
-                        <div style="width: 14px; height: 14px; border-radius: 50%; background: #fff; border: 3px solid #0091ca; margin-top: 6px;"></div>
-                    </div>
-                    <div style="flex: 1; padding-left: 20px;">
-                        <div style="font-weight: 700; font-size: 1.15rem; color: #222;">Welcome address</div>
-                    </div>
-                </div>
-
-                <div style="display: flex; align-items: flex-start; margin-bottom: 30px; position: relative;">
-                    <div style="flex: 0 0 220px; text-align: right; padding-right: 40px; color: #0091ca; font-weight: 700; font-size: 1.1rem;">8:30 – 9:00</div>
-                    <div style="flex: 0 0 40px; z-index: 2; display: flex; justify-content: center;">
-                        <div style="width: 14px; height: 14px; border-radius: 50%; background: #fff; border: 3px solid #0091ca; margin-top: 6px;"></div>
-                    </div>
-                    <div style="flex: 1; padding-left: 20px;">
-                        <div style="font-weight: 700; font-size: 1.15rem; color: #222;">Invited talk 1</div>
-                        <ul style="list-style-type: disc; padding: 0; margin: 10px 0 0 20px; font-size: 0.95rem; color: #555;">
-                            <li style="margin-bottom: 15px;">
-                                <strong style="color: #222;">AI-Driven Innovations in Resilient Agriculture</strong>
-                                <div style="color: #555; font-size: 0.9rem; margin-top: 4px;">Baskar Ganapathysubramaniam (Iowa State University)</div>
-                            </li>
-                        </ul>
-                    </div>
-                </div>
-
-                <div style="display: flex; align-items: flex-start; margin-bottom: 30px; position: relative;">
-                    <div style="flex: 0 0 220px; text-align: right; padding-right: 40px; color: #0091ca; font-weight: 700; font-size: 1.1rem;">9:00 – 10:00</div>
-                    <div style="flex: 0 0 40px; z-index: 2; display: flex; justify-content: center;">
-                        <div style="width: 14px; height: 14px; border-radius: 50%; background: #fff; border: 3px solid #0091ca; margin-top: 6px;"></div>
-                    </div>
-                    <div style="flex: 1; padding-left: 20px;">
-                        <div style="font-weight: 700; font-size: 1.15rem; color: #222;">Technical Session 1</div>
-						<div style="color: #222;">15 minutes for each paper (12-minute presentation + 3-minute Q&A)</div>
-                        <ul style="list-style-type: disc; padding: 0; margin: 10px 0 0 20px; font-size: 0.95rem; color: #555;">
-                            <li style="margin-bottom: 15px;">
-                                <strong style="color: #222;">YOLO-Guided Pretraining for Apple Counting under Limited Annotations</strong>
-                                <div style="color: #555; font-size: 0.9rem; margin-top: 4px;">Giuliano Ramírez (Universidad Andres Bello, Chile), Orietta Nicolis (University of Messina, Italy), Hans Lobel (Pontificia Universidad Catolica de Chile, Chile), Billy Peralta (Universidad Andres Bello, Chile)</div>
-                            </li>
-                            <li style="margin-bottom: 15px;">
-                                <strong style="color: #222;">BloomBench: A Multi-Species Benchmark for Evaluating the Generalization of Fruit Tree Phenology Models</strong>
-                                <div style="color: #555; font-size: 0.9rem; margin-top: 4px;">Ron van Bree (Wageningen University & Research, Netherlands), Diego Marcos (Inria, University of Montpellier, France), Ioannis N. Athanasiadis (Wageningen University & Research, Netherlands)</div>
-                            </li>
-                            <li style="margin-bottom: 15px;">
-                                <strong style="color: #222;">Learning Causal Agroecosystem Dynamics through Physics-Guided Machine Intelligence</strong>
-                                <div style="color: #555; font-size: 0.9rem; margin-top: 4px;">Mahule Roy (University of Oxford, UK), Subhas Roy (TATA Consumer Products Limited, India)</div>
-                            </li>
-                            <li style="margin-bottom: 15px;">
-                                <strong style="color: #222;">Drone-based 3D Reconstruction of Plants in Field Conditions Using Neural Radiance Fields (NeRFs)</strong>
-                                <div style="color: #555; font-size: 0.9rem; margin-top: 4px;">Shambhavi Joshi, Ashlyn Rairdin, Elizabeth Tranel, Talukder Jubery, Soumik Sarkar, Arti Singh, Baskar Ganapathysubramaniam, Adarsh Krishnamurthy (Iowa State University, USA)</div>
-                            </li>
-                        </ul>
-                    </div>
-                </div>
-
-                <div style="display: flex; align-items: flex-start; margin-bottom: 30px; position: relative;">
-                    <div style="flex: 0 0 220px; text-align: right; padding-right: 40px; color: #0091ca; font-weight: 700; font-size: 1.1rem;">10:00 – 10:45</div>
-                    <div style="flex: 0 0 40px; z-index: 2; display: flex; justify-content: center;">
-                        <div style="width: 14px; height: 14px; border-radius: 50%; background: #fff; border: 3px solid #0091ca; margin-top: 6px;"></div>
-                    </div>
-                    <div style="flex: 1; padding-left: 20px;">
-                        <div style="font-weight: 700; font-size: 1.15rem; color: #222;">Break + Poster Session (at Level 2 Posters WS11–WS20)</div>
-                    </div>
-                </div>
-
-                <div style="display: flex; align-items: flex-start; margin-bottom: 30px; position: relative;">
-                    <div style="flex: 0 0 220px; text-align: right; padding-right: 40px; color: #0091ca; font-weight: 700; font-size: 1.1rem;">10:45 – 11:15</div>
-                    <div style="flex: 0 0 40px; z-index: 2; display: flex; justify-content: center;">
-                        <div style="width: 14px; height: 14px; border-radius: 50%; background: #fff; border: 3px solid #0091ca; margin-top: 6px;"></div>
-                    </div>
-                    <div style="flex: 1; padding-left: 20px;">
-                        <div style="font-weight: 700; font-size: 1.15rem; color: #222;">Invited talk 2</div>
-                        <ul style="list-style-type: disc; padding: 0; margin: 10px 0 0 20px; font-size: 0.95rem; color: #555;">
-                            <li style="margin-bottom: 15px;">
-                                <strong style="color: #222;">Future of Food: Challenges and Opportunities in Feeding Humanity for the Next Century</strong>
-                                <div style="color: #555; font-size: 0.9rem; margin-top: 4px;">Alok Talekar (Google Research)</div>
-                            </li>
-                        </ul>
-                    </div>
-                </div>
-
-                <div style="display: flex; align-items: flex-start; margin-bottom: 30px; position: relative;">
-                    <div style="flex: 0 0 220px; text-align: right; padding-right: 40px; color: #0091ca; font-weight: 700; font-size: 1.1rem;">11:15 – 12:15</div>
-                    <div style="flex: 0 0 40px; z-index: 2; display: flex; justify-content: center;">
-                        <div style="width: 14px; height: 14px; border-radius: 50%; background: #fff; border: 3px solid #0091ca; margin-top: 6px;"></div>
-                    </div>
-                    <div style="flex: 1; padding-left: 20px;">
-                        <div style="font-weight: 700; font-size: 1.15rem; color: #222;">Technical Session 2</div>
-						<div style="color: #222;">15 minutes for each paper (12-minute presentation + 3-minute Q&A)</div>
-                        <ul style="list-style-type: disc; padding: 0; margin: 10px 0 0 20px; font-size: 0.95rem; color: #555;">
-                            <li style="margin-bottom: 15px;">
-                                <strong style="color: #222;">Zero-Shot Transfer Capabilities of the Sundial Foundation Model for Leaf Area Index Forecasting</strong>
-                                <div style="color: #555; font-size: 0.9rem; margin-top: 4px;">Peining Zhang, Hongchen Qin, Haochen Zhang, Ziqi Guo, Guiling Wang, Jinbo Bi (University of Connecticut, USA)</div>
-                            </li>
-                            <li style="margin-bottom: 15px;">
-                                <strong style="color: #222;">StateSpace-SSL: Linear-Time Self-supervised Learning for Plant Disease Detection</strong>
-                                <div style="color: #555; font-size: 0.9rem; margin-top: 4px;">Abdullah Al Mamun, Miaohua Zhang, David Ahmedt-Aristizabal, Zeeshan Hayder (Griffith University, Australia; Data61 CSIRO, Australia), Mohammad Awrangjeb (Griffith University, Australia)</div>
-                            </li>
-                            <li style="margin-bottom: 15px;">
-                                <strong style="color: #222;">PaddyVLM: An Expert-tuned Vision-Language Model for Paddy Disease Diagnosis</strong>
-                                <div style="color: #555; font-size: 0.9rem; margin-top: 4px;">Arun Kumar, Sangam Kumar Jena, Pandarasamy Arjunan (Indian Institute of Science, India)</div>
-                            </li>
-                            <li style="margin-bottom: 15px;">
-                                <strong style="color: #222;">LLM-Orchestrated Digital Twins for Safe, Human-Centered Decision Support in Precision Agriculture</strong>
-                                <div style="color: #555; font-size: 0.9rem; margin-top: 4px;">Charles Cao (University of Tennessee, USA), Sajal K. Das (Missouri University of Science and Technology, USA), Jie Zhuang (University of Tennessee, USA), Robert Davis (University of Tennessee Health Science Center, USA)</div>
-                            </li>
-                        </ul>
-                    </div>
-                </div>
-
-                <div style="display: flex; align-items: flex-start; margin-bottom: 30px; position: relative;">
-                    <div style="flex: 0 0 220px; text-align: right; padding-right: 40px; color: #0091ca; font-weight: 700; font-size: 1.1rem;">12:15 – 12:20</div>
-                    <div style="flex: 0 0 40px; z-index: 2; display: flex; justify-content: center;">
-                        <div style="width: 14px; height: 14px; border-radius: 50%; background: #fff; border: 3px solid #0091ca; margin-top: 6px;"></div>
-                    </div>
-                    <div style="flex: 1; padding-left: 20px;">
-                        <div style="font-weight: 700; font-size: 1.15rem; color: #222;">Closing remarks</div>
-                    </div>
-                </div>
-
-                <div style="display: flex; align-items: flex-start; margin-bottom: 30px; position: relative;">
-                    <div style="flex: 0 0 220px; text-align: right; padding-right: 40px; color: #0091ca; font-weight: 700; font-size: 1.1rem;">12:20 – 1:15</div>
-                    <div style="flex: 0 0 40px; z-index: 2; display: flex; justify-content: center;">
-                        <div style="width: 14px; height: 14px; border-radius: 50%; background: #fff; border: 3px solid #0091ca; margin-top: 6px;"></div>
-                    </div>
-                    <div style="flex: 1; padding-left: 20px;">
-                        <div style="font-weight: 700; font-size: 1.15rem; color: #222;">Lunch</div>
-                    </div>
-                </div>
-
-                <div style="display: flex; align-items: flex-start; position: relative;">
-                    <div style="flex: 0 0 220px; text-align: right; padding-right: 40px; color: #0091ca; font-weight: 700; font-size: 1.1rem;">17:00 – 18:00</div>
-                    <div style="flex: 0 0 40px; z-index: 2; display: flex; justify-content: center;">
-                        <div style="width: 14px; height: 14px; border-radius: 50%; background: #fff; border: 3px solid #0091ca; margin-top: 6px;"></div>
-                    </div>
-                    <div style="flex: 1; padding-left: 20px;">
-                        <div style="font-weight: 700; font-size: 1.15rem; color: #222;">Joint panel with <a href="https://ai-2-ase.github.io/">AI4ASE</a></div>
-                    </div>
-                </div>
-            </div> <div style="margin-top: 50px; padding-left: 15px;">
-                <h3 style="font-weight: 700; color: #222; margin-bottom: 25px; border-bottom: 2px solid #0091ca; display: inline-block;">Poster Presentations</h3>
-                <ul style="list-style-type: disc; padding: 0; margin: 20px 0 0 20px; font-size: 0.95rem; color: #555;">
-                    <li style="margin-bottom: 20px;">
-                        <strong style="color: #222;">An Overall Real-Time Mechanism for Classification and Quality Evaluation of Rice</strong>
-                        <div style="color: #555; font-size: 0.9rem; margin-top: 4px;">Wanke Xia, Ruoxin Peng, Haoqi Chu, Xinlei Zhu, Zhiyu Yang (China Agricultural University, China), Yiting Zhao (Tsinghua University, China), Lili Yang (China Agricultural University, China)</div>
-                    </li>
-                    <li style="margin-bottom: 20px;">
-                        <strong style="color: #222;">Bilinear Magic Meets CLIP: Unsupervised Learning in Pig Counting Scenario</strong>
-                        <div style="color: #555; font-size: 0.9rem; margin-top: 4px;">Yue Sun, Lili Yang (China Agricultural University, China)</div>
-                    </li>
-                    <li style="margin-bottom: 20px;">
-                        <strong style="color: #222;">ReproPheno and ReproPhenoNet: A Large-Scale Multimodal Benchmark Dataset and Deep Learning Framework for Reproductive-Stage Plant Phenotyping</strong>
-                        <div style="color: #555; font-size: 0.9rem; margin-top: 4px;">Sanjan Baitalik, Rajashik Datta, Utsho Banerjee (Institute of Engineering & Management, India), Rajarshi Karmakar (University of Engineering & Management, India), Vincent Stoerger (University of Nebraska-Lincoln, USA), Himadri Nath Saha (University of Calcutta, India), Sruti Das Choudhury (University of Nebraska-Lincoln, USA)</div>
-                    </li>
-                    <li style="margin-bottom: 20px;">
-                        <strong style="color: #222;">When YOLO Meets SAM: Data-Efficient Weed Density Estimation</strong>
-                        <div style="color: #555; font-size: 0.9rem; margin-top: 4px;">Soniya (Indian Institute of Science, India; ICASS SD, Canada), Nived Ambadipudi (Purdue University, USA; ICASS SD, Canada), Apurva Narayan (University of Western Ontario, Canada)</div>
-                    </li>
-                    <li style="margin-bottom: 20px;">
-                        <strong style="color: #222;">Causal-GeoSim: Evaluating Directional Robustness and Spatial Risk Awareness of Large Language Models in Climate–Agriculture Systems</strong>
-                        <div style="color: #555; font-size: 0.9rem; margin-top: 4px;">Youla Yang (Indiana University Bloomington, USA)</div>
-                    </li>
-                    <li style="margin-bottom: 20px;">
-                        <strong style="color: #222;">AI-Enabled Reconfigurable Edge Device for Plant Health Assessment in Greenhouse Environment</strong>
-                        <div style="color: #555; font-size: 0.9rem; margin-top: 4px;">Prabha Sundaravadivel, Rafael Reyes-Ramirez, Prajwal Mahesha Sethurani, Chase Brown, Shekhar Suman Borah (The University of Texas at Tyler, USA), Shaker Kousik (USDA-ARS, USA)</div>
-                    </li>
-                    <li style="margin-bottom: 20px;">
-                        <strong style="color: #222;">On-Edge Weed Detection Using Unmanned Aerial Vehicles</strong>
-                        <div style="color: #555; font-size: 0.9rem; margin-top: 4px;">Mohamed Elmohandes, Diaa Addeen Abuhani, Maya Haj Hussain, Jowaria Khan, Imran Zualkernan (American University of Sharjah, UAE)</div>
-                    </li>
-                    <li style="margin-bottom: 20px;">
-                        <strong style="color: #222;">Toward Multimodal Agricultural Digital Twins: Integrating Autonomous UGV Monitoring, High-Precision Phenotyping, and Diffusion-Based Generative Data Augmentation</strong>
-                        <div style="color: #555; font-size: 0.9rem; margin-top: 4px;">Yuichiro Nomura, Hiroshi Mineno (Shizuoka University, Japan)</div>
-                    </li>
-                    <li style="margin-bottom: 20px;">
-                        <strong style="color: #222;">PaddyFormer: An Improved RT-DETRv2 based Approach for Paddy Crop Growth Stage Detection on Drone based RGB Imagery</strong>
-                        <div style="color: #555; font-size: 0.9rem; margin-top: 4px;">Anonymous submission</div>
-                    </li>
-                    <li style="margin-bottom: 20px;">
-                        <strong style="color: #222;">Benchmarking Tabular Foundation Models for Agricultural Yield Prediction</strong>
-                        <div style="color: #555; font-size: 0.9rem; margin-top: 4px;">Mohammed Musthafa Rafi, Timilehin T. Ayanlade, Baskar Ganapathysubramaniam, Soumik Sarkar, Adarsh Krishnamurthy (Iowa State University, USA), Chinmay Hegde (New York University, USA), Aditya Balu (Iowa State University, USA)</div>
-                    </li>
-                </ul>
-            </div>
-			<div style="margin-top: 60px; padding-left: 0;">
-			<h3 style="font-weight: 700; color: #222; margin-bottom: 25px; border-bottom: 2px solid #0091ca; display: inline-block;">Poster Presentation Instructions</h3>
-            <div style="margin-bottom: 30px;">
-                <h5 style="font-weight: 700; color: #222;">Poster Location and Setup</h5>
-                <p style="color: #555; line-height: 1.6;font-size: 1rem; margin-top: 4px;">
-                    All posters will be located on Level 2 of the Singapore EXPO (not in the Expo Halls). The poster boards are double-sided and arranged in an accordion formation. Use size A0 posters in portrait orientation (fastening materials will be provided).
-                </p>
-            </div>
-        
-            <div style="margin-bottom: 30px;">
-                <div style="margin-bottom: 20px; text-align: center;">
-                    <img src="assets/images/C1.png" alt="Poster Setup Real View" style="max-width: 100%; height: auto; border-radius: 4px; border: 1px solid #ddd;">
-                </div>
-                <div style="text-align: center;">
-                    <img src="assets/images/C2.png" alt="Level 2 Poster Location Map" style="max-width: 100%; height: auto; border-radius: 4px; border: 1px solid #ddd;">
-                </div>
-            </div>
-        
-            <div style="margin-bottom: 30px;">
-                <h5 style="font-weight: 700; color: #222;">Poster Numbers and Assignment</h5>
-                <p style="color: #555; line-height: 1.6;font-size: 1rem; margin-top: 4px;">
-                    Each poster board will have a number displayed (e.g., WS1, WS55, WS128). The assigned poster numbers for the Agri AI Workshop are WS11–WS20. Poster numbers are assigned in the order in which poster papers are listed above (e.g., WS11 for the first poster paper).
-                </p>
-            </div>
-        
-            <div>
-                <h5 style="font-weight: 700; color: #222;">Poster Presentation Guidelines</h5>
-                <ul style="color: #555; line-height: 1.6; padding-left: 20px;">
-                    <li style="margin-bottom: 10px;font-size: 1rem;">Display your poster on the day of your assigned poster session (e.g., Jan 26 morning), not the evening before.</li>
-                    <li style="margin-bottom: 10px;font-size: 1rem;">Remove your poster at the end of day to prevent loss. AAAI is not responsible for posters that are misplaced or stolen.</li>
-                </ul>
-            </div>
-			</div>
-    </div>
-</section>
-
-<section id="speakers" class="speakers-section section" style="background: none; padding-top: 60px; padding-bottom: 60px;">
-    <div class="container">
-        <h3 class="section-heading text-center mb-5" style="font-weight: 700;">Keynote Speakers</h3>
-        
-        <div class="row mb-5">
-            <div class="col-md-3 text-center">
-                <div class="card border-0" style="background: transparent;">
-                    <a href="https://www.cs.iastate.edu/people/baskar-ganapathysubramanian" target="_blank">
-                        <img src="assets/images/Baskar.jpg" class="profile-image rounded-circle mb-3" style="width: 200px; height: 200px; object-fit: cover; border: 5px solid #eee;" alt="Baskar Ganapathysubramaniam">
-                    </a>
-                    <h5 style="font-weight: 700; color: #f9d659;">Baskar Ganapathysubramaniam</h5>
-                    <div class="meta" style="color: #666; font-size: 0.9em;">
-                        Anderlik Professor of Engineering<br>
-                        Iowa State University
-                    </div>
-                </div>
-            </div>
-            <div class="col-md-9 text-start">
-                <h4 style="font-weight: 800; text-transform: uppercase; margin-bottom: 15px;">AI-Driven Innovations in Resilient Agriculture</h4>
-                <p style="color: #555; line-height: 1.6; font-size: 1.0rem;">
-                    The AI Institute for Resilient Agriculture (AIIRA) is advancing a suite of ambitious "moonshot" projects at the nexus of artificial intelligence and agricultural resilience. I will present our efforts to transform agriculture through AI-enabled tools that are both use-inspired and foundationally rigorous. Our vision includes scalable AI agents for pest identification and mitigation, 3D digital twins of plants for ideotype breeding, multi-modal sensing for field operations, and integration of large language/reasoning models for decision support. These efforts, powered by a transdisciplinary team, aim to democratize access, enable robust decision-making, and catalyze global collaborations to ensure a sustainable and productive agricultural eco-system.
-                </p>
-                <h5 style="font-weight: 700; margin-top: 25px;">BIO</h5>
-                <p style="color: #666; font-size: 0.95em; line-height: 1.6;">
-                    Baskar Ganapathysubramaniam is Anderlik Professor of Engineering at Iowa State University. Baskar received his BTech from IIT Madras, and a PhD from Cornell University. He directs a curiosity driven, computational sustainability group (me.iastate.edu/bglab) with research interests in the areas of scientific computing, applied mathematics, and machine learning with applications in food, energy, and healthcare systems. He is the director of the NSF/USDA funded AI Institute for Resilient Agriculture (aiira.iastate.edu) which is a multi-institutional project focused on use-inspired AI developments.
-                </p>
-            </div>
-        </div>
-
-        <hr class="my-5" style="border-top: 1px solid #eee;">
-
-        <div class="row">
-            <div class="col-md-3 text-center">
-                <div class="card border-0" style="background: transparent;">
-                    <a href="https://research.google/people/106902/" target="_blank">
-                        <img src="assets/images/Alok.jpg" class="profile-image rounded-circle mb-3" style="width: 200px; height: 200px; object-fit: cover; border: 5px solid #eee;" alt="Alok Talekar">
-                    </a>
-                    <h5 style="font-weight: 700; color: #f9d659;">Alok Talekar</h5>
-                    <div class="meta" style="color: #666; font-size: 0.9em;">
-                        Sustainability and Agriculture Lead<br>
-                        Google DeepMind
-                    </div>
-                </div>
-            </div>
-            <div class="col-md-9 text-start">
-                <h4 style="font-weight: 800; text-transform: uppercase; margin-bottom: 15px;">Future of Food: Challenges and Opportunities in feeding humanity for the next century</h4>
-                <p style="color: #555; line-height: 1.6; font-size: 1.0rem;">
-                    The global food system is facing unprecedented challenges. In 2023, 2.4 billion people experienced moderate to severe food insecurity, a crisis precipitated by anthropogenic climate change and evolving dietary preferences. Furthermore, the food system itself significantly contributes to the climate crisis, with food loss and waste accounting for 2.4 gigatonnes of carbon dioxide equivalent emissions per year (GT CO2e/yr), and the production, mismanagement, and misapplication of agricultural inputs such as fertilizers and manure generating 2.5 GT CO2e/yr. To sustain a projected global population of 9.6 billion by 2050, food production must increase by at least 60%. Transitional sustainable agricultural practices can transform the sector from a net source of greenhouse gas emissions to a vital carbon sink. In this talk, Alok will cover the broad range of opportunities for ML experts to build transformative applications in the food and agriculture sector, and share learnings from his own team’s work at DeepMind.
-                </p>
-                <h5 style="font-weight: 700; margin-top: 25px;">BIO</h5>
-                <p style="color: #666; font-size: 0.95em; line-height: 1.6;">
-                    Alok is the Sustainability and Agriculture lead at Google DeepMind. His team is focused on digitizing the agricultural sector using remote sensing and machine learning, to solve urgent problems faced by the sector in India and the rest of the global south, by enabling targeted data driven allocation of resources and services. He was a founding member of the Climate Trace initiative. He has been with Google in various teams for a decade, and worked in the tech industry for over 15 years.
-                </p>
-            </div>
-        </div>
-    </div>
-</section>
-
-	
-	<section id="organization" class="speakers-section section theme-bg-light">
+	<!-- Program Section -->
+	<section id="program" class="schedule-section section theme-bg-light" style="padding-top: 60px; padding-bottom: 60px;">
 		<div class="container">
-			<h3 class="section-heading text-center mb-3">Organization</h3>			
-				<div class="mb-3 text-center">
-					<h4 class="mb-2 text-center mb-3">General Co-chairs</h4>
-					<div style="text-align: center; display: center !important;" class="text-center">
-						<div class="left col-6 col-lg-2 mb-4 " style="display: inline-block; margin-right: 20px;">
-							<div class="card rounded-0">
-								<a href="https://isc.mst.edu/people/ri/sdas/" target="_blank"><img src="assets/images/Sajal-Das.jpg" class="card-img-top profile-image rounded-circle mb-2" style="width: 130px; height: 130px;" alt="Sajal Das"></a>
-								<div class="card-body">
-									<h5 class="card-title mb-2">Sajal Das</h5>
-									<div class="card-text mb-3">
-										<div class="meta">Computer Science</div>
-										<div class="meta">Missouri University of Science and Technology, USA</div>
-									</div><!--//card-text-->									
-								</div><!--//card-->
-							</div><!--//card-->
-						</div>
-						<div class="left col-6 col-lg-2 mb-4" style="display: inline-block;  margin-left: 20px;">
-							<div class="card rounded-0">
-								<a href="https://www.samy101.com" target="_blank"><img src="assets/images/samy.jpg" class="card-img-top profile-image rounded-circle mb-2" style="width: 130px; height: 130px;" alt="Pandarasamy Arjunan"></a>
-								<div class="card-body">
-									<h5 class="card-title mb-2">Pandarasamy Arjunan</h5>
-									<div class="card-text mb-3">
-										<div class="meta">Indian Institute of Science, Bangalore</div>
-										<div class="meta">India</div>
-									</div><!--//card-text-->									
-								</div><!--//card-->
-							</div><!--//card-->
-						</div><!--//col-->
-						<div class="left col-6 col-lg-2 mb-4 " style="display: inline-block; margin-right: 20px;">
-							<div class="card rounded-0">
-								<a href="https://www.engineering.iastate.edu/people/profile/soumiks/" target="_blank"><img src="assets/images/Sarkar-Soumik.jpg" class="card-img-top profile-image rounded-circle mb-2" style="width: 130px; height: 130px;" alt="Soumik Sarkar"></a>
-								<div class="card-body">
-									<h5 class="card-title mb-2">Soumik Sarkar</h5>
-									<div class="card-text mb-3">
-										<div class="meta">Mechanical Engineering</div>
-										<div class="meta">Iowa State University, USA</div>
-									</div><!--//card-text-->									
-								</div><!--//card-->
-							</div><!--//card-->
-						</div><!--//col-->
-					</div><!--//row-->
-					
-					<h4 class="mb-4 text-center" style="font-weight: 700;">Technical Program Committee</h4>
-					<div style="text-align: center; display: center !important;" class="text-center">
-						<div class="left col-6 col-lg-2 mb-4 " style="display: inline-block; margin-right: 20px;">
-							<div class="card rounded-0">
-								<a href="https://sites.google.com/ma.iitr.ac.in/vktanwar/home" target="_blank"><img src="assets/images/Vishesh.jpg" class="card-img-top profile-image rounded-circle mb-2" style="width: 130px; height: 130px; object-fit: cover;" alt="Vishesh Tanwar"></a>
-								<div class="card-body">
-									<h5 class="card-title mb-2">Vishesh Tanwar</h5>
-									<div class="card-text mb-3">
-										<div class="meta">Missouri University of Science and Technology, USA</div>
-									</div><!--//card-text-->									
-								</div><!--//card-->
-							</div><!--//card-->
-						</div><!--//col-->
-						<div class="left col-6 col-lg-2 mb-4 " style="display: inline-block; margin-right: 20px;">
-							<div class="card rounded-0">
-								<a href="https://web.eecs.utk.edu/~qcao1/" target="_blank"><img src="assets/images/Charles.jpg" class="card-img-top profile-image rounded-circle mb-2" style="width: 130px; height: 130px; object-fit: cover; object-position: center 12%;" alt="Charles Qing Cao"></a>
-								<div class="card-body">
-									<h5 class="card-title mb-2">Charles Qing Cao</h5>
-									<div class="card-text mb-3">
-										<div class="meta">University of Tennessee, Knoxville</div>
-									</div><!--//card-text-->									
-								</div><!--//card-->
-							</div><!--//card-->
-						</div><!--//col-->
-						<div class="left col-6 col-lg-2 mb-4 " style="display: inline-block; margin-right: 20px;">
-							<div class="card rounded-0">
-								<a href="https://www.nbair.res.in/node/215" target="_blank"><img src="assets/images/Kesavan.jpg" class="card-img-top profile-image rounded-circle mb-2" style="width: 130px; height: 130px;" alt="Kesavan Subaharan"></a>
-								<div class="card-body">
-									<h5 class="card-title mb-2">Kesavan Subaharan</h5>
-									<div class="card-text mb-3">
-										<div class="meta">ICAR-National Bureau of Agricultural Insect Resources</div>
-									</div><!--//card-text-->									
-								</div><!--//card-->
-							</div><!--//card-->
-						</div><!--//col-->
-						<div class="left col-6 col-lg-2 mb-4 " style="display: inline-block; margin-right: 20px;">
-							<div class="card rounded-0">
-								<a href="https://gtl.csa.iisc.ac.in/hari/" target="_blank"><img src="assets/images/Narahari.jpg" class="card-img-top profile-image rounded-circle mb-2" style="width: 130px; height: 130px;" alt="Kesavan Subaharan"></a>
-								<div class="card-body">
-									<h5 class="card-title mb-2">Yadati Narahari</h5>
-									<div class="card-text mb-3">
-										<div class="meta">Indian Institute of Science, Bangalore</div>
-                                        <div class="meta">India</div>
-									</div><!--//card-text-->									
-								</div><!--//card-->
-							</div><!--//card-->
-						</div><!--//col-->
-					</div><!--//row-->
+			<h3 class="section-heading text-center mb-3" style="font-weight: 700;">Program</h3>
+			<p class="text-center text-muted mb-5">The workshop is structured as a half-day to full-day event prioritizing extended debate over lengthy presentations.</p>
+			
+			<div style="max-width: 700px; margin: 0 auto; position: relative;">
+				<div style="position: absolute; left: 140px; top: 10px; bottom: 0; width: 2px; background-color: #e9ecef; z-index: 1;"></div>
+				<div style="display: flex; align-items: flex-start; margin-bottom: 30px; position: relative;">
+					<div style="flex: 0 0 120px; text-align: right; padding-right: 20px; color: #0091ca; font-weight: 700;">45 Mins</div>
+					<div style="flex: 0 0 40px; z-index: 2; display: flex; justify-content: center;">
+						<div style="width: 14px; height: 14px; border-radius: 50%; background: #fff; border: 3px solid #0091ca; margin-top: 6px;"></div>
+					</div>
+					<div style="flex: 1; padding-left: 20px;">
+						<div style="font-weight: 700; font-size: 1.1rem; color: #222;">Opening Keynote</div>
+						<p class="text-muted small">Presented by a distinguished speaker from academia or industry, highlighting emerging bottlenecks in pervasive agent deployment.</p>
+					</div>
 				</div>
-				</div>			
-        </section><!--//speakers-section-->	
+				<div style="display: flex; align-items: flex-start; margin-bottom: 30px; position: relative;">
+					<div style="flex: 0 0 120px; text-align: right; padding-right: 20px; color: #0091ca; font-weight: 700;">Thematic</div>
+					<div style="flex: 0 0 40px; z-index: 2; display: flex; justify-content: center;">
+						<div style="width: 14px; height: 14px; border-radius: 50%; background: #fff; border: 3px solid #0091ca; margin-top: 6px;"></div>
+					</div>
+					<div style="flex: 1; padding-left: 20px;">
+						<div style="font-weight: 700; font-size: 1.1rem; color: #222;">Technical Paper Sessions</div>
+						<p class="text-muted small">Accepted papers organized into thematic sessions, prioritizing floor time for extended debate over lengthy presentations.</p>
+					</div>
+				</div>
+				<div style="display: flex; align-items: flex-start; margin-bottom: 30px; position: relative;">
+					<div style="flex: 0 0 120px; text-align: right; padding-right: 20px; color: #0091ca; font-weight: 700;">Interactive</div>
+					<div style="flex: 0 0 40px; z-index: 2; display: flex; justify-content: center;">
+						<div style="width: 14px; height: 14px; border-radius: 50%; background: #fff; border: 3px solid #0091ca; margin-top: 6px;"></div>
+					</div>
+					<div style="flex: 1; padding-left: 20px;">
+						<div style="font-weight: 700; font-size: 1.1rem; color: #222;">Poster & Demo Session</div>
+						<p class="text-muted small">If submissions warrant it, interactive demonstrations and posters will showcase ongoing research, prototypes, and industrial solutions.</p>
+					</div>
+				</div>
+			</div>
+		</div>
+	</section>
 
-<!--
-<!DOCTYPE html>
-<html>
-<head>
-<style>
-    .grid-container {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    grid-gap: 10px;
-    }
+	<!-- Organizers Section -->
+	<section id="organizers" class="speakers-section section theme-bg-white">
+		<div class="container">
+			<h3 class="section-heading text-center mb-5" style="font-weight: 700;">Workshop Organizers</h3>			
+			<div class="row justify-content-center">
+				
+				<div class="col-12 col-md-6 col-lg-3 text-center mb-4">
+					<a href="https://dipanwitat.github.io/myprofile/" target="_blank" class="card border-0 h-100 shadow-sm hover-card">
+						<div class="p-3"><img src="assets/images/dipanwita.jpg" class="card-img-top profile-image rounded-circle mb-2 mx-auto" style="width: 130px; height: 130px; object-fit: cover; border: 3px solid #f1f5f9;" alt="Dr. Dipanwita Thakur" onerror="this.src='data:image/svg+xml;utf8,<svg xmlns=\'http://www.w3.org/2000/svg\' viewBox=\'0 0 24 24\' fill=\'%23ccc\'><path d=\'M12 12c2.21 0 4-1.79 4-4s-1.79-4-4-4-4 1.79-4 4 1.79 4 4 4zm0 2c-2.67 0-8 1.34-8 4v2h16v-2c0-2.66-5-4-8-4z\'/></svg>'"></div>
+						<div class="card-body p-2">
+							<h5 class="card-title font-weight-bold mb-1" style="color: #0f172a;">Dr. Dipanwita Thakur</h5>
+							<p class="small text-primary mb-2">University of Calabria, Italy</p>
+							<p class="text-muted px-2" style="font-size: 0.82rem; line-height: 1.45;">Research in process mining, federated learning, green AI, intelligent process analytics, and AI-driven healthcare systems. Associate Editor for <i>Information Fusion</i> and the <i>IEEE Sensors Journal</i>; Senior Member of IEEE.</p>
+						</div>
+					</a>
+				</div>
+				<div class="col-12 col-md-6 col-lg-3 text-center mb-4">
+					<a href="https://sites.google.com/ma.iitr.ac.in/vktanwar/home" target="_blank" class="card border-0 h-100 shadow-sm hover-card">
+						<div class="p-3"><img src="assets/images/vishesh.jpg" class="card-img-top profile-image rounded-circle mb-2 mx-auto" style="width: 130px; height: 130px; object-fit: cover; border: 3px solid #f1f5f9;" alt="Dr. Vishesh Kumar Tanwar" onerror="this.src='data:image/svg+xml;utf8,<svg xmlns=\'http://www.w3.org/2000/svg\' viewBox=\'0 0 24 24\' fill=\'%23ccc\'><path d=\'M12 12c2.21 0 4-1.79 4-4s-1.79-4-4-4-4 1.79-4 4 1.79 4 4 4zm0 2c-2.67 0-8 1.34-8 4v2h16v-2c0-2.66-5-4-8-4z\'/></svg>'"></div>
+						<div class="card-body p-2">
+							<h5 class="card-title font-weight-bold mb-1" style="color: #0f172a;">Dr. Vishesh K. Tanwar</h5>
+							<p class="small text-primary mb-2">Missouri University of Science and Technology, USA</p>
+							<p class="text-muted px-2" style="font-size: 0.82rem; line-height: 1.45;">Focuses on the cyber-physical systems required to move ML from cloud to physical edge environments. Co-founder of AgriTech startup FarmVates, deploying drones and IoT sensor networks in the field.</p>
+						</div>
+					</a>
+				</div>
+				<div class="col-12 col-md-6 col-lg-3 text-center mb-4">
+					<a href="https://www.samy101.com/" target="_blank" class="card border-0 h-100 shadow-sm hover-card">
+						<div class="p-3"><img src="assets/images/samy.jpg" class="card-img-top profile-image rounded-circle mb-2 mx-auto" style="width: 130px; height: 130px; object-fit: cover; border: 3px solid #f1f5f9;" alt="Dr. Pandarasamy Arjunan"></div>
+						<div class="card-body p-2">
+							<h5 class="card-title font-weight-bold mb-1" style="color: #0f172a;">Dr. Pandarasamy Arjunan</h5>
+							<p class="small text-primary mb-2">Indian Institute of Science, Bangalore, India</p>
+							<p class="text-muted px-2" style="font-size: 0.82rem; line-height: 1.45;">Expertise in cyber-physical systems and edge intelligence, including federated learning and foundation models on resource-constrained edge devices for smart buildings, mobility, and energy sustainability. Author of 40+ publications.</p>
+						</div>
+					</a>
+				</div>
+				<div class="col-12 col-md-6 col-lg-3 text-center mb-4">
+					<a href="https://mc.net.ist.osaka-u.ac.jp/people/h-yamagu/" target="_blank" class="card border-0 h-100 shadow-sm hover-card">
+						<div class="p-3"><img src="assets/images/hirozumi.jpg" class="card-img-top profile-image rounded-circle mb-2 mx-auto" style="width: 130px; height: 130px; object-fit: cover; border: 3px solid #f1f5f9;" alt="Prof. Hirozumi Yamaguchi" onerror="this.src='data:image/svg+xml;utf8,<svg xmlns=\'http://www.w3.org/2000/svg\' viewBox=\'0 0 24 24\' fill=\'%23ccc\'><path d=\'M12 12c2.21 0 4-1.79 4-4s-1.79-4-4-4-4 1.79-4 4 1.79 4 4 4zm0 2c-2.67 0-8 1.34-8 4v2h16v-2c0-2.66-5-4-8-4z\'/></svg>'"></div>
+						<div class="card-body p-2">
+							<h5 class="card-title font-weight-bold mb-1" style="color: #0f172a;">Prof. Hirozumi Yamaguchi</h5>
+							<p class="small text-primary mb-2">Osaka University, Japan</p>
+							<p class="text-muted px-2" style="font-size: 0.82rem; line-height: 1.45;">Decades of leadership in pervasive networks and CPS. Former PerCom TPC Vice Co-Chair; co-organized PerVehicle and PerFlow. Area Editor for Pervasive and Mobile Computing and Ad Hoc Networks.</p>
+						</div>
+					</a>
+				</div>
+			</div>
+		</div>
 
-    .grid-item {
-    position: relative;
-    }
-
-    .grid-item img {
-    width: 100%;
-    height: auto;
-    }
-
-    .overlay {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background-color: rgba(0, 0, 0, 0.5);
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    opacity: 0;
-    transition: opacity 0.3s ease;
-    }
-
-    .overlay:hover {
-    opacity: 1;
-    }
-
-    .overlay img {
-    max-width: 80%;
-    max-height: 80%;
-    }
-</style>
-</head>
-<body>
-<div class="grid-container">
-    <div class="grid-item">
-    <img src="image1.jpeg" alt="Image 1">
-    <div class="overlay">
-        <img src="image1.jpeg" alt="Image 1">
-    </div>
-    </div>
-    <div class="grid-item">
-    <img src="image2.jpeg" alt="Image 2">
-    <div class="overlay">
-        <img src="image2.jpeg" alt="Image 2">
-    </div>
-    </div>
-    <div class="grid-item">
-    <img src="image3.jpeg" alt="Image 3">
-    <div class="overlay"> 
-        <img src="image3.jpeg" alt="Image 3">
-    </div>
-    </div>
-    <div class="grid-item">
-    <img src="image4.jpeg" alt="Image 4">
-    <div class="overlay">
-        <img src="image4.jepg" alt="Image 4">
-    </div>
-    </div>
-    <!-- Add more grid items as needed -->
-</div>
-</body>
-</html>
-	
-
-	<footer class="footer py-2 theme-bg-primary">
+		<div class="container">
+            <br>
+			<h5 class="section-heading text-center mb-5" style="font-weight: 700;">Technical Program Committee</h3>
+			
+			<div class="row justify-content-center">
+				
+				<div class="col-12 col-md-4 col-lg-3 text-center mb-4">
+					<a href="https://iitbhu.ac.in/dept/cse/people/ajaycse" target="_blank" class="card border-0 h-100 shadow-sm hover-card" style="background: solid #f1f5f9;">
+						<div class="p-3">
+							<div class="mx-auto rounded-circle d-flex align-items-center justify-content-center" style="width:100px; height:110px; background: #ffffff; border: 1px solid #e2e8f0;">
+								<img src="assets/images/ajay.jpg" class="card-img-top profile-image rounded-circle mb-2 mx-auto" style="width: 110px; height: 110px; object-fit: cover;">
+							</div>
+						</div>
+						<div class="card-body p-2">
+							<h6 class="font-weight-bold mb-1" style="color: #1e293b;">Ajay Pratap</h6>
+							<p class="small text-muted mb-1" style="font-size: 0.78rem; line-height: 1.3;">Indian Institute of Technology (BHU)</p>
+							<span class="badge bg-light text-primary border border-secondary p-1" style="font-size: 0.7rem;">India</span>
+						</div>
+					</a>
+				</div>
+				<div class="col-12 col-md-4 col-lg-3 text-center mb-4">
+					<a href="https://cs.mst.edu/" target="_blank" class="card border-0 h-100 shadow-sm hover-card" style="background: solid #f1f5f9;">
+						<div class="p-3">
+							<div class="mx-auto rounded-circle d-flex align-items-center justify-content-center" style="width:100px; height:110px; background: #ffffff; border: 1px solid #e2e8f0;">
+								<img src="assets/images/tpc_member.jpg" class="card-img-top profile-image rounded-circle mb-2 mx-auto" style="width: 110px; height: 110px; object-fit: cover;">
+							</div>
+						</div>
+						<div class="card-body p-2">
+							<h6 class="font-weight-bold mb-1" style="color: #1e293b;">Amit Jha</h6>
+							<p class="small text-muted mb-1" style="font-size: 0.78rem; line-height: 1.3;">Missouri University of S&T</p>
+							<span class="badge bg-light text-primary border border-secondary p-1" style="font-size: 0.7rem;">USA</span>
+						</div>
+					</a>
+				</div>
+				<div class="col-12 col-md-4 col-lg-3 text-center mb-4">
+					<a href="https://www.iit.cnr.it/andrea.passarella/" target="_blank" class="card border-0 h-100 shadow-sm hover-card" style="background: solid #f1f5f9;">
+						<div class="p-3">
+							<div class="mx-auto rounded-circle d-flex align-items-center justify-content-center" style="width:100px; height:110px; background: #ffffff; border: 1px solid #e2e8f0;">
+								<img src="assets/images/andrea.jpg" class="card-img-top profile-image rounded-circle mb-2 mx-auto" style="width: 110px; height: 110px; object-fit: cover;">
+							</div>
+						</div>
+						<div class="card-body p-2">
+							<h6 class="font-weight-bold mb-1" style="color: #1e293b;">Andrea Passarella</h6>
+							<p class="small text-muted mb-1" style="font-size: 0.78rem; line-height: 1.3;">CNR Pisa</p>
+							<span class="badge bg-light text-primary border border-secondary p-1" style="font-size: 0.7rem;">Italy</span>
+						</div>
+					</a>
+				</div>
+				<div class="col-12 col-md-4 col-lg-3 text-center mb-4">
+					<a href="https://findanexpert.unimelb.edu.au/profile/413184-aravinda-s.-rao" target="_blank" class="card border-0 h-100 shadow-sm hover-card" style="background: solid #f1f5f9;">
+						<div class="p-3">
+							<div class="mx-auto rounded-circle d-flex align-items-center justify-content-center" style="width:100px; height:110px; background: #ffffff; border: 1px solid #e2e8f0;">
+								<img src="assets/images/aravinda.jpeg" class="card-img-top profile-image rounded-circle mb-2 mx-auto" style="width: 110px; height: 110px; object-fit: cover;">
+							</div>
+						</div>
+						<div class="card-body p-2">
+							<h6 class="font-weight-bold mb-1" style="color: #1e293b;">Aravinda Rao</h6>
+							<p class="small text-muted mb-1" style="font-size: 0.78rem; line-height: 1.3;">University of Melbourne</p>
+							<span class="badge bg-light text-primary border border-secondary p-1" style="font-size: 0.7rem;">Australia</span>
+						</div>
+					</a>
+				</div>
+				<div class="col-12 col-md-4 col-lg-3 text-center mb-4">
+					<a href="https://www.bits-pilani.ac.in/pilani/ashish-gupta/" target="_blank" class="card border-0 h-100 shadow-sm hover-card" style="background: solid #f1f5f9;">
+						<div class="p-3">
+							<div class="mx-auto rounded-circle d-flex align-items-center justify-content-center" style="width:100px; height:110px; background: #ffffff; border: 1px solid #e2e8f0;">
+								<img src="assets/images/ashish.jpg" class="card-img-top profile-image rounded-circle mb-2 mx-auto" style="width: 110px; height: 110px; object-fit: cover;">
+							</div>
+						</div>
+						<div class="card-body p-2">
+							<h6 class="font-weight-bold mb-1" style="color: #1e293b;">Ashish Gupta</h6>
+							<p class="small text-muted mb-1" style="font-size: 0.78rem; line-height: 1.3;">BITS-Pilani Dubai</p>
+							<span class="badge bg-light text-primary border border-secondary p-1" style="font-size: 0.7rem;">UAE</span>
+						</div>
+					</a>
+				</div>
+				<div class="col-12 col-md-4 col-lg-3 text-center mb-4">
+					<a href="https://web.eecs.utk.edu/~qcao1/" target="_blank" class="card border-0 h-100 shadow-sm hover-card" style="background: solid #f1f5f9;">
+						<div class="p-3">
+							<div class="mx-auto rounded-circle d-flex align-items-center justify-content-center" style="width:100px; height:110px; background: #ffffff; border: 1px solid #e2e8f0;">
+								<img src="assets/images/charles.jpeg" class="card-img-top profile-image rounded-circle mb-2 mx-auto" style="width: 110px; height: 110px; object-fit: cover;">
+							</div>
+						</div>
+						<div class="card-body p-2">
+							<h6 class="font-weight-bold mb-1" style="color: #1e293b;">Charles Qing Cao</h6>
+							<p class="small text-muted mb-1" style="font-size: 0.78rem; line-height: 1.3;">University of Tennessee</p>
+							<span class="badge bg-light text-primary border border-secondary p-1" style="font-size: 0.7rem;">USA</span>
+						</div>
+					</a>
+				</div>
+				<div class="col-12 col-md-4 col-lg-3 text-center mb-4">
+					<a href="https://makautwb.ac.in/plug.php?e=WBUTtool&f=faculty_profile&user_id=36" target="_blank" class="card border-0 h-100 shadow-sm hover-card" style="background: solid #f1f5f9;">
+						<div class="p-3">
+							<div class="mx-auto rounded-circle d-flex align-items-center justify-content-center" style="width:100px; height:110px; background: #ffffff; border: 1px solid #e2e8f0;">
+								<img src="assets/images/debashis.jpg" class="card-img-top profile-image rounded-circle mb-2 mx-auto" style="width: 110px; height: 110px; object-fit: cover;">
+							</div>
+						</div>
+						<div class="card-body p-2">
+							<h6 class="font-weight-bold mb-1" style="color: #1e293b;">Debashis De</h6>
+							<p class="small text-muted mb-1" style="font-size: 0.78rem; line-height: 1.3;">Maulana Abul Kalam Azad University of Technology</p>
+							<span class="badge bg-light text-primary border border-secondary p-1" style="font-size: 0.7rem;">India</span>
+						</div>
+					</a>
+				</div>
+				<div class="col-12 col-md-4 col-lg-3 text-center mb-4">
+					<a href="https://ginko.unipg.it/ws/sitopersonale/cv.php?humanid=francesco.bettisorbelli&tipo=EV" target="_blank" class="card border-0 h-100 shadow-sm hover-card" style="background: solid #f1f5f9;">
+						<div class="p-3">
+							<div class="mx-auto rounded-circle d-flex align-items-center justify-content-center" style="width:100px; height:110px; background: #ffffff; border: 1px solid #e2e8f0;">
+								<img src="assets/images/francesco.jpg" class="card-img-top profile-image rounded-circle mb-2 mx-auto" style="width: 110px; height: 110px; object-fit: cover;">
+							</div>
+						</div>
+						<div class="card-body p-2">
+							<h6 class="font-weight-bold mb-1" style="color: #1e293b;">Francesco Betti Sorbelli</h6>
+							<p class="small text-muted mb-1" style="font-size: 0.78rem; line-height: 1.3;">University of Perugia</p>
+							<span class="badge bg-light text-primary border border-secondary p-1" style="font-size: 0.7rem;">Italy</span>
+						</div>
+					</a>
+				</div>
+				<div class="col-12 col-md-4 col-lg-3 text-center mb-4">
+					<a href="https://coe.northeastern.edu/people/restuccia-francesco/" target="_blank" class="card border-0 h-100 shadow-sm hover-card" style="background: solid #f1f5f9;">
+						<div class="p-3">
+							<div class="mx-auto rounded-circle d-flex align-items-center justify-content-center" style="width:100px; height:110px; background: #ffffff; border: 1px solid #e2e8f0;">
+								<img src="assets/images/restuccia.jpg" class="card-img-top profile-image rounded-circle mb-2 mx-auto" style="width: 110px; height: 110px; object-fit: cover;">
+							</div>
+						</div>
+						<div class="card-body p-2">
+							<h6 class="font-weight-bold mb-1" style="color: #1e293b;">Francesco Restuccia</h6>
+							<p class="small text-muted mb-1" style="font-size: 0.78rem; line-height: 1.3;">Northeastern University</p>
+							<span class="badge bg-light text-primary border border-secondary p-1" style="font-size: 0.7rem;">USA</span>
+						</div>
+					</a>
+				</div>
+				<div class="col-12 col-md-4 col-lg-3 text-center mb-4">
+					<a href="https://sites.google.com/site/hprabhatgupta/home?authuser=0" target="_blank" class="card border-0 h-100 shadow-sm hover-card" style="background: solid #f1f5f9;">
+						<div class="p-3">
+							<div class="mx-auto rounded-circle d-flex align-items-center justify-content-center" style="width:100px; height:110px; background: #ffffff; border: 1px solid #e2e8f0;">
+								<img src="assets/images/hari.jpg" class="card-img-top profile-image rounded-circle mb-2 mx-auto" style="width: 110px; height: 110px; object-fit: cover;">
+							</div>
+						</div>
+						<div class="card-body p-2">
+							<h6 class="font-weight-bold mb-1" style="color: #1e293b;">Hari Prabhat Gupta</h6>
+							<p class="small text-muted mb-1" style="font-size: 0.78rem; line-height: 1.3;">Indian Institute of Technology (BHU)</p>
+							<span class="badge bg-light text-primary border border-secondary p-1" style="font-size: 0.7rem;">India</span>
+						</div>
+					</a>
+				</div>
+				<div class="col-12 col-md-4 col-lg-3 text-center mb-4">
+					<a href="https://www.green.shizuoka.ac.jp/staff_en/082/" target="_blank" class="card border-0 h-100 shadow-sm hover-card" style="background: solid #f1f5f9;">
+						<div class="p-3">
+							<div class="mx-auto rounded-circle d-flex align-items-center justify-content-center" style="width:100px; height:110px; background: #ffffff; border: 1px solid #e2e8f0;">
+								<img src="assets/images/hiroshi.jpg" class="card-img-top profile-image rounded-circle mb-2 mx-auto" style="width: 110px; height: 110px; object-fit: cover;">
+							</div>
+						</div>
+						<div class="card-body p-2">
+							<h6 class="font-weight-bold mb-1" style="color: #1e293b;">Hiroshi Mineno</h6>
+							<p class="small text-muted mb-1" style="font-size: 0.78rem; line-height: 1.3;">Shizuoka University</p>
+							<span class="badge bg-light text-primary border border-secondary p-1" style="font-size: 0.7rem;">Japan</span>
+						</div>
+					</a>
+				</div>
+				<div class="col-12 col-md-4 col-lg-3 text-center mb-4">
+					<a href="https://faculty.eng.ufl.edu/jiexu/" target="_blank" class="card border-0 h-100 shadow-sm hover-card" style="background: solid #f1f5f9;">
+						<div class="p-3">
+							<div class="mx-auto rounded-circle d-flex align-items-center justify-content-center" style="width:100px; height:110px; background: #ffffff; border: 1px solid #e2e8f0;">
+								<img src="assets/images/jie.jpg" class="card-img-top profile-image rounded-circle mb-2 mx-auto" style="width: 110px; height: 110px; object-fit: cover;">
+							</div>
+						</div>
+						<div class="card-body p-2">
+							<h6 class="font-weight-bold mb-1" style="color: #1e293b;">Jie Xu</h6>
+							<p class="small text-muted mb-1" style="font-size: 0.78rem; line-height: 1.3;">University of Florida</p>
+							<span class="badge bg-light text-primary border border-secondary p-1" style="font-size: 0.7rem;">USA</span>
+						</div>
+					</a>
+				</div>
+				<div class="col-12 col-md-4 col-lg-3 text-center mb-4">
+					<a href="https://siebelschool.illinois.edu/about/people/faculty/klara" target="_blank" class="card border-0 h-100 shadow-sm hover-card" style="background: solid #f1f5f9;">
+						<div class="p-3">
+							<div class="mx-auto rounded-circle d-flex align-items-center justify-content-center" style="width:100px; height:110px; background: #ffffff; border: 1px solid #e2e8f0;">
+								<img src="assets/images/klara.jpeg" class="card-img-top profile-image rounded-circle mb-2 mx-auto" style="width: 110px; height: 110px; object-fit: cover;">
+							</div>
+						</div>
+						<div class="card-body p-2">
+							<h6 class="font-weight-bold mb-1" style="color: #1e293b;">Klara Nahrstedt</h6>
+							<p class="small text-muted mb-1" style="font-size: 0.78rem; line-height: 1.3;">University of Illinois Urbana-Champaign</p>
+							<span class="badge bg-light text-primary border border-secondary p-1" style="font-size: 0.7rem;">USA</span>
+						</div>
+					</a>
+				</div>
+				<div class="col-12 col-md-4 col-lg-3 text-center mb-4">
+					<a href="https://www.cs.sjtu.edu.cn/~linghe.kong/" target="_blank" class="card border-0 h-100 shadow-sm hover-card" style="background: solid #f1f5f9;">
+						<div class="p-3">
+							<div class="mx-auto rounded-circle d-flex align-items-center justify-content-center" style="width:100px; height:110px; background: #ffffff; border: 1px solid #e2e8f0;">
+								<img src="assets/images/linghe.jpg" class="card-img-top profile-image rounded-circle mb-2 mx-auto" style="width: 110px; height: 110px; object-fit: cover;">
+							</div>
+						</div>
+						<div class="card-body p-2">
+							<h6 class="font-weight-bold mb-1" style="color: #1e293b;">Linghe Kong</h6>
+							<p class="small text-muted mb-1" style="font-size: 0.78rem; line-height: 1.3;">Shanghai Jiao Tong University</p>
+							<span class="badge bg-light text-primary border border-secondary p-1" style="font-size: 0.7rem;">China</span>
+						</div>
+					</a>
+				</div>
+				<div class="col-12 col-md-4 col-lg-3 text-center mb-4">
+					<a href="https://findanexpert.unimelb.edu.au/profile/16503-marimuthu-palaniswami" target="_blank" class="card border-0 h-100 shadow-sm hover-card" style="background: solid #f1f5f9;">
+						<div class="p-3">
+							<div class="mx-auto rounded-circle d-flex align-items-center justify-content-center" style="width:100px; height:110px; background: #ffffff; border: 1px solid #e2e8f0;">
+								<img src="assets/images/marimuthu.jpg" class="card-img-top profile-image rounded-circle mb-2 mx-auto" style="width: 110px; height: 110px; object-fit: cover;">
+							</div>
+						</div>
+						<div class="card-body p-2">
+							<h6 class="font-weight-bold mb-1" style="color: #1e293b;">Marimuthu Palaniswami</h6>
+							<p class="small text-muted mb-1" style="font-size: 0.78rem; line-height: 1.3;">University of Melbourne</p>
+							<span class="badge bg-light text-primary border border-secondary p-1" style="font-size: 0.7rem;">Australia</span>
+						</div>
+					</a>
+				</div>
+				<div class="col-12 col-md-4 col-lg-3 text-center mb-4">
+					<a href="https://lab.vanderbilt.edu/live/person/meiyi-ma/" target="_blank" class="card border-0 h-100 shadow-sm hover-card" style="background: solid #f1f5f9;">
+						<div class="p-3">
+							<div class="mx-auto rounded-circle d-flex align-items-center justify-content-center" style="width:100px; height:110px; background: #ffffff; border: 1px solid #e2e8f0;">
+								<img src="assets/images/meiyi.jpg" class="card-img-top profile-image rounded-circle mb-2 mx-auto" style="width: 110px; height: 110px; object-fit: cover;">
+							</div>
+						</div>
+						<div class="card-body p-2">
+							<h6 class="font-weight-bold mb-1" style="color: #1e293b;">Meiyi Ma</h6>
+							<p class="small text-muted mb-1" style="font-size: 0.78rem; line-height: 1.3;">Vanderbilt University</p>
+							<span class="badge bg-light text-primary border border-secondary p-1" style="font-size: 0.7rem;">USA</span>
+						</div>
+					</a>
+				</div>
+				<div class="col-12 col-md-4 col-lg-3 text-center mb-4">
+					<a href="https://people.njit.edu/profile/zhou" target="_blank" class="card border-0 h-100 shadow-sm hover-card" style="background: solid #f1f5f9;">
+						<div class="p-3">
+							<div class="mx-auto rounded-circle d-flex align-items-center justify-content-center" style="width:100px; height:110px; background: #ffffff; border: 1px solid #e2e8f0;">
+								<img src="assets/images/mengchu.jpg" class="card-img-top profile-image rounded-circle mb-2 mx-auto" style="width: 110px; height: 110px; object-fit: cover;">
+							</div>
+						</div>
+						<div class="card-body p-2">
+							<h6 class="font-weight-bold mb-1" style="color: #1e293b;">Mengchu Zhou</h6>
+							<p class="small text-muted mb-1" style="font-size: 0.78rem; line-height: 1.3;">New Jersey Institute of Technology</p>
+							<span class="badge bg-light text-primary border border-secondary p-1" style="font-size: 0.7rem;">USA</span>
+						</div>
+					</a>
+				</div>
+				<div class="col-12 col-md-4 col-lg-3 text-center mb-4">
+					<a href="https://www2.scut.edu.cn/cs_en/2025/1016/c45160a605567/page.htm" target="_blank" class="card border-0 h-100 shadow-sm hover-card" style="background: solid #f1f5f9;">
+						<div class="p-3">
+							<div class="mx-auto rounded-circle d-flex align-items-center justify-content-center" style="width:100px; height:110px; background: #ffffff; border: 1px solid #e2e8f0;">
+								<img src="assets/images/min.jpg" class="card-img-top profile-image rounded-circle mb-2 mx-auto" style="width: 110px; height: 110px; object-fit: cover;">
+							</div>
+						</div>
+						<div class="card-body p-2">
+							<h6 class="font-weight-bold mb-1" style="color: #1e293b;">Min Chen</h6>
+							<p class="small text-muted mb-1" style="font-size: 0.78rem; line-height: 1.3;">South China University of Technology</p>
+							<span class="badge bg-light text-primary border border-secondary p-1" style="font-size: 0.7rem;">China</span>
+						</div>
+					</a>
+				</div>
+				<div class="col-12 col-md-4 col-lg-3 text-center mb-4">
+					<a href="https://www.unibo.it/sitoweb/paolo.bellavista/en" target="_blank" class="card border-0 h-100 shadow-sm hover-card" style="background: solid #f1f5f9;">
+						<div class="p-3">
+							<div class="mx-auto rounded-circle d-flex align-items-center justify-content-center" style="width:100px; height:110px; background: #ffffff; border: 1px solid #e2e8f0;">
+								<img src="assets/images/paolo.jpg" class="card-img-top profile-image rounded-circle mb-2 mx-auto" style="width: 110px; height: 110px; object-fit: cover;">
+							</div>
+						</div>
+						<div class="card-body p-2">
+							<h6 class="font-weight-bold mb-1" style="color: #1e293b;">Paolo Bellavista</h6>
+							<p class="small text-muted mb-1" style="font-size: 0.78rem; line-height: 1.3;">University of Bologna</p>
+							<span class="badge bg-light text-primary border border-secondary p-1" style="font-size: 0.7rem;">Italy</span>
+						</div>
+					</a>
+				</div>
+				<div class="col-12 col-md-4 col-lg-3 text-center mb-4">
+					<a href="https://pmanzoni.notion.site/Pietro-Manzoni-s-web-page-9e8aa06b0dbb4bb38cf190d9a2e6a842/" target="_blank" class="card border-0 h-100 shadow-sm hover-card" style="background: solid #f1f5f9;">
+						<div class="p-3">
+							<div class="mx-auto rounded-circle d-flex align-items-center justify-content-center" style="width:100px; height:110px; background: #ffffff; border: 1px solid #e2e8f0;">
+								<img src="assets/images/pietro.jpg" class="card-img-top profile-image rounded-circle mb-2 mx-auto" style="width: 110px; height: 110px; object-fit: cover;">
+							</div>
+						</div>
+						<div class="card-body p-2">
+							<h6 class="font-weight-bold mb-1" style="color: #1e293b;">Pietro Manzoni</h6>
+							<p class="small text-muted mb-1" style="font-size: 0.78rem; line-height: 1.3;">Universitat de Valencia</p>
+							<span class="badge bg-light text-primary border border-secondary p-1" style="font-size: 0.7rem;">Spain</span>
+						</div>
+					</a>
+				</div>
+				<div class="col-12 col-md-4 col-lg-3 text-center mb-4">
+					<a href="https://www.linkedin.com/in/robertominerva/" target="_blank" class="card border-0 h-100 shadow-sm hover-card" style="background: solid #f1f5f9;">
+						<div class="p-3">
+							<div class="mx-auto rounded-circle d-flex align-items-center justify-content-center" style="width:100px; height:110px; background: #ffffff; border: 1px solid #e2e8f0;">
+								<img src="assets/images/roberto.jpeg" class="card-img-top profile-image rounded-circle mb-2 mx-auto" style="width: 110px; height: 110px; object-fit: cover;">
+							</div>
+						</div>
+						<div class="card-body p-2">
+							<h6 class="font-weight-bold mb-1" style="color: #1e293b;">Roberto Minerva</h6>
+							<p class="small text-muted mb-1" style="font-size: 0.78rem; line-height: 1.3;">Telecom Sud Paris</p>
+							<span class="badge bg-light text-primary border border-secondary p-1" style="font-size: 0.7rem;">France</span>
+						</div>
+					</a>
+				</div>
+				<div class="col-12 col-md-4 col-lg-3 text-center mb-4">
+					<a href="https://www.iitg.ac.in/cse/internet-pages/satyajit.das" target="_blank" class="card border-0 h-100 shadow-sm hover-card" style="background: solid #f1f5f9;">
+						<div class="p-3">
+							<div class="mx-auto rounded-circle d-flex align-items-center justify-content-center" style="width:100px; height:110px; background: #ffffff; border: 1px solid #e2e8f0;">
+								<img src="assets/images/satyajit.jpeg" class="card-img-top profile-image rounded-circle mb-2 mx-auto" style="width: 110px; height: 110px; object-fit: cover;">
+							</div>
+						</div>
+						<div class="card-body p-2">
+							<h6 class="font-weight-bold mb-1" style="color: #1e293b;">Satyajit Das</h6>
+							<p class="small text-muted mb-1" style="font-size: 0.78rem; line-height: 1.3;">Indian Institute of Technology, Guwahati</p>
+							<span class="badge bg-light text-primary border border-secondary p-1" style="font-size: 0.7rem;">India</span>
+						</div>
+					</a>
+				</div>
+				<div class="col-12 col-md-4 col-lg-3 text-center mb-4">
+					<a href="https://cse.umn.edu/cs/shashi-shekhar" target="_blank" class="card border-0 h-100 shadow-sm hover-card" style="background: solid #f1f5f9;">
+						<div class="p-3">
+							<div class="mx-auto rounded-circle d-flex align-items-center justify-content-center" style="width:100px; height:110px; background: #ffffff; border: 1px solid #e2e8f0;">
+								<img src="assets/images/shashi.jpg" class="card-img-top profile-image rounded-circle mb-2 mx-auto" style="width: 110px; height: 110px; object-fit: cover;">
+							</div>
+						</div>
+						<div class="card-body p-2">
+							<h6 class="font-weight-bold mb-1" style="color: #1e293b;">Shashi Shekhar</h6>
+							<p class="small text-muted mb-1" style="font-size: 0.78rem; line-height: 1.3;">University of Minnesota</p>
+							<span class="badge bg-light text-primary border border-secondary p-1" style="font-size: 0.7rem;">USA</span>
+						</div>
+					</a>
+				</div>
+				<div class="col-12 col-md-4 col-lg-3 text-center mb-4">
+					<a href="https://silvestri.engr.uky.edu/" target="_blank" class="card border-0 h-100 shadow-sm hover-card" style="background: solid #f1f5f9;">
+						<div class="p-3">
+							<div class="mx-auto rounded-circle d-flex align-items-center justify-content-center" style="width:100px; height:110px; background: #ffffff; border: 1px solid #e2e8f0;">
+								<img src="assets/images/simone.jpg" class="card-img-top profile-image rounded-circle mb-2 mx-auto" style="width: 110px; height: 110px; object-fit: cover;">
+							</div>
+						</div>
+						<div class="card-body p-2">
+							<h6 class="font-weight-bold mb-1" style="color: #1e293b;">Simone Silvestri</h6>
+							<p class="small text-muted mb-1" style="font-size: 0.78rem; line-height: 1.3;">University of Kentucky</p>
+							<span class="badge bg-light text-primary border border-secondary p-1" style="font-size: 0.7rem;">USA</span>
+						</div>
+					</a>
+				</div>
+				<div class="col-12 col-md-4 col-lg-3 text-center mb-4">
+					<a href="https://iitpkd.ac.in/people/sreenath" target="_blank" class="card border-0 h-100 shadow-sm hover-card" style="background: solid #f1f5f9;">
+						<div class="p-3">
+							<div class="mx-auto rounded-circle d-flex align-items-center justify-content-center" style="width:100px; height:110px; background: #ffffff; border: 1px solid #e2e8f0;">
+								<img src="assets/images/sreenath.jpg" class="card-img-top profile-image rounded-circle mb-2 mx-auto" style="width: 110px; height: 110px; object-fit: cover;">
+							</div>
+						</div>
+						<div class="card-body p-2">
+							<h6 class="font-weight-bold mb-1" style="color: #1e293b;">Sreenath Vijayakumar</h6>
+							<p class="small text-muted mb-1" style="font-size: 0.78rem; line-height: 1.3;">Indian Institute of Technology, Palakkad</p>
+							<span class="badge bg-light text-primary border border-secondary p-1" style="font-size: 0.7rem;">India</span>
+						</div>
+					</a>
+				</div>
+				<div class="col-12 col-md-4 col-lg-3 text-center mb-4">
+					<a href="https://ece.northeastern.edu/fac-ece/basagni/" target="_blank" class="card border-0 h-100 shadow-sm hover-card" style="background: solid #f1f5f9;">
+						<div class="p-3">
+							<div class="mx-auto rounded-circle d-flex align-items-center justify-content-center" style="width:100px; height:110px; background: #ffffff; border: 1px solid #e2e8f0;">
+								<img src="assets/images/stefano.jpg" class="card-img-top profile-image rounded-circle mb-2 mx-auto" style="width: 110px; height: 110px; object-fit: cover;">
+							</div>
+						</div>
+						<div class="card-body p-2">
+							<h6 class="font-weight-bold mb-1" style="color: #1e293b;">Stefano Basagni</h6>
+							<p class="small text-muted mb-1" style="font-size: 0.78rem; line-height: 1.3;">Northeastern University</p>
+							<span class="badge bg-light text-primary border border-secondary p-1" style="font-size: 0.7rem;">USA</span>
+						</div>
+					</a>
+				</div>
+				<div class="col-12 col-md-4 col-lg-3 text-center mb-4">
+					<a href="http://www.cssclab.cn/xjkong/" target="_blank" class="card border-0 h-100 shadow-sm hover-card" style="background: solid #f1f5f9;">
+						<div class="p-3">
+							<div class="mx-auto rounded-circle d-flex align-items-center justify-content-center" style="width:100px; height:110px; background: #ffffff; border: 1px solid #e2e8f0;">
+								<img src="assets/images/xianjie.jpg" class="card-img-top profile-image rounded-circle mb-2 mx-auto" style="width: 110px; height: 110px; object-fit: cover;">
+							</div>
+						</div>
+						<div class="card-body p-2">
+							<h6 class="font-weight-bold mb-1" style="color: #1e293b;">Xianjie Kong</h6>
+							<p class="small text-muted mb-1" style="font-size: 0.78rem; line-height: 1.3;">Zhejiang University of Technology</p>
+							<span class="badge bg-light text-primary border border-secondary p-1" style="font-size: 0.7rem;">China</span>
+						</div>
+					</a>
+				</div>
+				<div class="col-12 col-md-4 col-lg-3 text-center mb-4">
+					<a href="https://cds.iisc.ac.in/faculty/simmhan/" target="_blank" class="card border-0 h-100 shadow-sm hover-card" style="background: solid #f1f5f9;">
+						<div class="p-3">
+							<div class="mx-auto rounded-circle d-flex align-items-center justify-content-center" style="width:100px; height:110px; background: #ffffff; border: 1px solid #e2e8f0;">
+								<img src="assets/images/yogesh.jpg" class="card-img-top profile-image rounded-circle mb-2 mx-auto" style="width: 110px; height: 110px; object-fit: cover;">
+							</div>
+						</div>
+						<div class="card-body p-2">
+							<h6 class="font-weight-bold mb-1" style="color: #1e293b;">Yogesh Simmhan</h6>
+							<p class="small text-muted mb-1" style="font-size: 0.78rem; line-height: 1.3;">Indian Institute of Science</p>
+							<span class="badge bg-light text-primary border border-secondary p-1" style="font-size: 0.7rem;">India</span>
+						</div>
+					</a>
+				</div>
+			</div></div></section>
+	<footer class="footer py-3 theme-bg-primary">
 		<div class="container text-center">
-			 <!--/* This template is free as long as you keep the footer attribution link. If you'd like to use the template without the attribution link, you can buy the commercial license via our website: themes.3rdwavemedia.com Thank you for your support. :) */-->
-			<small class="copyright">Designed with <i class="fas fa-heart" style="color: #EC645E;"></i> by <a href="http://themes.3rdwavemedia.com" target="_blank">Xiaoying Riley</a> for developers</small>
+			<small class="copyright" style="color:rgba(255, 255, 255, 0.75);">PerAgent 2027 Workshop | Co-located with PerCom 2027</small><br>
+            <small class="copyright">Designed with <i class="fas fa-heart" style="color: #EC645E;"></i> by <a href="http://themes.3rdwavemedia.com" target="_blank">Xiaoying Riley</a> for developers</small>
 		</div><!--//container-->	    
+		</div>
 	</footer>
 	
-	<!-- Javascript -->          
 	<script src="assets/plugins/popper.min.js"></script>
 	<script src="assets/plugins/bootstrap/js/bootstrap.min.js"></script>  
 	<script src="assets/plugins/smoothscroll.min.js"></script>
