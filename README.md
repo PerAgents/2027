@@ -1,5 +1,4 @@
 
-## AgriAI 2025 website
+## PerAgents 2027
 
-First International Workshop on AI in Agriculture (AgriAI)
-
+First International Workshop on Pervasive Agentic Systems and Multimodal Foundation Models
