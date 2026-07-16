@@ -63,6 +63,128 @@
             padding-bottom: 80px !important; 
         }
 		.benefits-list ul { margin-bottom: 1.5rem; }
+		.hero-block {
+			background: linear-gradient(135deg, #08111f 0%, #0f172a 45%, #0b6b8e 100%);
+			position: relative;
+		}
+		.hero-block-mask {
+			background: linear-gradient(135deg, rgba(8, 17, 31, 0.88) 0%, rgba(15, 23, 42, 0.72) 100%);
+		}
+		.premium-section {
+			background: radial-gradient(circle at top right, rgba(14, 165, 233, 0.08), transparent 30%), linear-gradient(180deg, #f8fbff 0%, #ffffff 100%);
+		}
+		.premium-panel {
+			background: rgba(255, 255, 255, 0.9);
+			border: 1px solid #dbe4ef;
+			border-radius: 18px;
+			box-shadow: 0 18px 40px rgba(15, 23, 42, 0.08);
+		}
+		.policy-pill {
+			display: inline-flex;
+			align-items: center;
+			gap: 0.5rem;
+			padding: 0.45rem 0.8rem;
+			border-radius: 999px;
+			background: #eff6ff;
+			color: #0f172a;
+			font-weight: 600;
+			font-size: 0.85rem;
+		}
+		.section-icon {
+			width: 44px;
+			height: 44px;
+			border-radius: 50%;
+			display: inline-flex;
+			align-items: center;
+			justify-content: center;
+			background: linear-gradient(135deg, #0091ca, #22c55e);
+			color: #fff;
+			font-size: 1rem;
+		}
+		.brand-link {
+			display: inline-flex !important;
+			align-items: center;
+			gap: 0.65rem;
+			padding: 0.35rem 0.65rem;
+			border-radius: 12px;
+			background: rgba(255, 255, 255, 0.1);
+			border: 1px solid rgba(255, 255, 255, 0.22);
+			color: #ffffff !important;
+			transition: all 0.25s ease;
+		}
+		.brand-link:hover,
+		.brand-link:focus {
+			background: rgba(255, 255, 255, 0.18);
+			border-color: rgba(255, 255, 255, 0.36);
+			transform: translateY(-1px);
+		}
+		.brand-text {
+			display: flex;
+			flex-direction: column;
+			line-height: 1.1;
+		}
+		.brand-title {
+			font-family: 'Montserrat', sans-serif;
+			font-size: 1rem;
+			font-weight: 800;
+			letter-spacing: 0.2px;
+		}
+		.percom-tab {
+			margin-left: 0.5rem;
+		}
+		.main-nav .nav-link {
+			font-size: 1.04rem;
+			font-weight: 600;
+			transition: transform 0.18s ease, color 0.18s ease;
+			transform-origin: center;
+		}
+		.main-nav .nav-item:not(.percom-tab) .nav-link:hover {
+			animation: navShake 0.38s ease-in-out infinite;
+			color: #ffffff !important;
+		}
+		@keyframes navShake {
+			0% { transform: scale(1.08) translateX(0) rotate(0deg); }
+			25% { transform: scale(1.08) translateX(-1px) rotate(-1deg); }
+			50% { transform: scale(1.08) translateX(1px) rotate(1deg); }
+			75% { transform: scale(1.08) translateX(-1px) rotate(-1deg); }
+			100% { transform: scale(1.08) translateX(0) rotate(0deg); }
+		}
+		.percom-tab-link {
+			display: inline-block;
+			padding: 0.5rem 1rem !important;
+			border-radius: 12px;
+			background: #d4af37;
+			color: #ffffff !important;
+			font-weight: 800;
+			letter-spacing: 0.2px;
+			text-transform: uppercase;
+			animation: percomBlink 1.1s steps(2, start) infinite;
+		}
+		.percom-tab-link:hover,
+		.percom-tab-link:focus {
+			background: #b9921e;
+			color: #ffffff !important;
+		}
+		@keyframes percomBlink {
+			0%, 45% {
+				opacity: 1;
+			}
+			50%, 100% {
+				opacity: 0.45;
+			}
+		}
+		@media (max-width: 991.98px) {
+			.main-nav .nav-link {
+				font-size: 1rem;
+			}
+			.main-nav .nav-item:not(.percom-tab) .nav-link:hover {
+				animation: none;
+			}
+			.percom-tab {
+				margin-top: 0.5rem;
+				margin-left: 0;
+			}
+		}
 	</style>
 </head> 
 <body>    
@@ -71,7 +193,11 @@
 			<div class="container-fluid">
 				<nav class="main-nav navbar navbar-expand-lg">
 					<div class="site-logo"> 
-						<a class="navbar-brand scrollto" href="#hero-block" style="font-family: 'Montserrat', sans-serif; font-weight: 800; color: #fff;">PerAgents 2027</a>
+						<a class="navbar-brand scrollto brand-link" href="#hero-block">
+							<span class="brand-text">
+								<span class="brand-title">PerAgents 2027</span>
+							</span>
+						</a>
 					</div>
 					<button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navigation" aria-controls="navigation" aria-expanded="false" aria-label="Toggle navigation">
 						<span class="navbar-toggler-icon"></span>
@@ -81,9 +207,12 @@
 						<ul class="nav navbar-nav">
 							<li class="nav-item"><a class="nav-link scrollto" href="#about">About</a></li>
 							<li class="nav-item"><a class="nav-link scrollto" href="#cfp">Call for Papers</a></li>
+							<li class="nav-item"><a class="nav-link scrollto" href="#submission">Submission Guidelines</a></li>
+							<li class="nav-item"><a class="nav-link scrollto" href="#timeline">Timeline</a></li>
 							<li class="nav-item"><a class="nav-link scrollto" href="#program">Program</a></li>
 							<li class="nav-item"><a class="nav-link scrollto" href="#organizers">Organizers</a></li>
-							<li class="nav-item"><a class="nav-link scrollto" href="#tpc">Technical Committee</a></li>
+							<li class="nav-item percom-tab"><a class="nav-link percom-tab-link" href="https://percom.org" target="_blank" rel="noopener">IEEE PerCom 2027</a></li>
+						<!--	<li class="nav-item"><a class="nav-link scrollto" href="#tpc">Technical Committee</a></li>-->
 						</ul></div></nav></div></div></header>
 						
 	<div id="hero-block" class="hero-block">
@@ -136,7 +265,7 @@
 					</ul>
 				</div><!--//benefits-list-->
 			</div>
-
+<!--
 			<div class="mb-3">
 				<h4 class="mb-2 text-center mb-3">Important Dates</h4>
 				<div class="benefits-list text-center mb-3">				
@@ -146,10 +275,166 @@
 						<li><i class="far fa-calendar-alt me-2"></i><strong>Camera-Ready Submission:</strong> 12 February 2027</li>
 						<li><i class="far fa-calendar-alt me-2"></i><strong>Workshop Date:</strong> TBA</li>
 					</ul>
-				</div><!--//benefits-list-->
+				</div>
 			</div>
+		-->
 		</div><!--//container-->
 	</section><!--//cfp-section-->
+
+	<!-- Submission Guidelines -->
+	<section id="submission" class="section premium-section">
+		<div class="container">
+			<div class="premium-panel p-4 p-lg-5">
+				<div class="text-center mb-4">
+					<h3 class="section-heading mb-2" style="font-weight: 800;">Submission Guidelines</h3>
+					<p class="text-muted mx-auto" style="max-width: 900px;">PerAgents follows the official PerCom 2027 submission workflow and IEEE formatting rules.</p>
+				</div>
+
+				<div class="row g-4 mt-1">
+					<div class="col-lg-6">
+						<div class="premium-panel p-4 h-100">
+							<h4 class="section-heading mb-3" style="font-weight: 800;">Paper Requirements</h4>
+							<ul class="mb-0" style="line-height: 1.7;">
+								<li>Workshop papers follow the standard PerCom workshop length limit: 6 pages.</li>
+								<li>Authors may include 1 additional page, for a maximum of 7 pages total.</li>
+								<li>All accepted papers must be presented in person by a designated presenter, preferably one of the authors.</li>
+								<li>Proxy or remote presentations are not allowed unless pre-approved by the workshop chairs, general chairs, and steering committee at least one week in advance.</li>
+							</ul>
+						</div>
+					</div>
+					<div class="col-lg-6">
+						<div class="premium-panel p-4 h-100">
+							<h4 class="section-heading mb-3" style="font-weight: 800;">Registration Policy</h4>
+							<ul class="mb-0" style="line-height: 1.7;">
+								<li>PerCom does not have a workshop-only registration fee.</li>
+								<li>Each accepted paper requires full PerCom registration.</li>
+								<li>There is no student-rate registration for accepted workshop papers.</li>
+								<li>Papers without a valid full registration or that are not presented in-person will be excluded from the proceedings.</li>
+							</ul>
+						</div>
+					</div>
+				</div>
+				<div class="row g-4">
+					<div class="col-md-6">
+						<div class="hover-card p-4 h-100">
+							<div class="policy-pill mb-3"><i class="fas fa-file-alt"></i> IEEE Paper Templates</div>
+							<p class="mb-3">Use the official IEEE LaTeX or Microsoft Word conference templates and follow the two-column formatting instructions.</p>
+							<a href="https://www.ieee.org/conferences/publishing/templates.html" target="_blank" rel="noopener" class="btn btn-primary">Open IEEE Templates</a>
+						</div>
+					</div>
+					<div class="col-md-6">
+						<div class="hover-card p-4 h-100">
+							<div class="policy-pill mb-3"><i class="fas fa-upload"></i> Submission Portal</div>
+							<p class="mb-3">Submit your paper through the official PerCom 2027 system for the main conference and associated events.</p>
+							<a href="https://percom2027.hotcrp.com/" target="_blank" rel="noopener" class="btn btn-primary">Go to PerCom HotCRP</a>
+						</div>
+					</div>
+				</div>
+				<div class="mt-4 premium-panel p-4">
+					<div class="mb-2"><strong>Before you submit</strong></div>
+					<ul class="mb-0" style="line-height: 1.7;">
+						<li>Review the PerCom 2027 Call for Papers for page limits and policy updates.</li>
+						<li>Prepare an anonymized submission consistent with the conference review process.</li>
+						<li>Verify all deadlines are interpreted in AOE time zone.</li>
+					</ul>
+					<div class="mt-3">
+						<a href="https://percom.org/call-for-papers/" target="_blank" rel="noopener">PerCom 2027 Call for Papers (official source)</a>
+					</div>
+				</div>
+			</div>
+		</div>
+	</section>
+
+	<!-- Timeline and presentation policies -->
+	<section id="timeline" class="section premium-section">
+		<div class="container">
+			<div class="premium-panel p-4 p-lg-5">
+				<div class="row align-items-start g-4">
+					<div class="col-lg-6">
+						<div class="d-flex align-items-center mb-3">
+							<div class="section-icon me-3"><i class="far fa-calendar-alt"></i></div>
+							<div>
+								<h3 class="section-heading mb-1" style="font-weight: 800;">Important Dates</h3>
+								<!-- <div class="text-muted">Important dates and planning milestones for PerAgents 2027.</div> -->
+							</div>
+						</div>
+						<div class="d-flex flex-column gap-3">
+							<div class="hover-card p-3">
+								<div class="policy-pill mb-2"><i class="fas fa-paper-plane"></i> Submission deadline</div>
+								<div class="fw-bold">03 November 2026 (AOE)</div>
+							</div>
+							<div class="hover-card p-3">
+								<div class="policy-pill mb-2"><i class="fas fa-bell"></i> Author notification</div>
+								<div class="fw-bold">08 January 2027</div>
+							</div>
+							<div class="hover-card p-3">
+								<div class="policy-pill mb-2"><i class="fas fa-pen-nib"></i> Camera-ready due</div>
+								<div class="fw-bold">12 February 2027</div>
+							</div>
+							<div class="hover-card p-3">
+								<div class="policy-pill mb-2"><i class="fas fa-map-marker-alt"></i> Workshop date</div>
+								<div class="fw-bold">TBA</div>
+							</div>
+						</div>
+					</div>
+					<div class="col-lg-6">
+						<div class="d-flex align-items-center mb-3">
+							<div class="section-icon me-3"><i class="fas fa-microphone-alt"></i></div>
+							<div>
+								<h3 class="section-heading mb-1" style="font-weight: 800;">Presentation Policies</h3>
+								<!--<div class="text-muted">Clear expectations for accepted papers and invited contributions.</div> -->
+							</div>
+						</div>
+						<div class="premium-panel p-4">
+							<ul class="list-unstyled mb-0">
+								<li class="mb-3"><span class="policy-pill mb-2"><i class="fas fa-user-check"></i> In-person presentation</span><div class="mt-2">At least one author of each accepted paper should present the work at the workshop.</div></li>
+								<li class="mb-3"><span class="policy-pill mb-2"><i class="fas fa-stopwatch"></i> Time-managed talks</span><div class="mt-2">Accepted papers will receive short, focused presentations to maximize discussion time and audience feedback.</div></li>
+								<li class="mb-3"><span class="policy-pill mb-2"><i class="fas fa-chalkboard-teacher"></i> Posters and demos</span><div class="mt-2">Strongly interactive submissions may be invited to present as posters or demonstrations to encourage direct engagement.</div></li>
+								<li><span class="policy-pill mb-2"><i class="fas fa-shield-alt"></i> Discussion-first format</span><div class="mt-2">Sessions are designed to emphasize technical debate, feedback, and cross-domain collaboration over long slide decks.</div></li>
+							</ul>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</section>
+
+	<!-- Website enhancement / submission pitch -->
+	<section id="highlights" class="section theme-bg-light">
+		<div class="container">
+			<div class="text-center mb-4">
+				<h3 class="section-heading mb-2" style="font-weight: 800;">Why Submit to PerAgents</h3>
+				<p class="text-muted mx-auto" style="max-width: 900px;">A focused, high-visibility workshop for researchers building the systems that make pervasive agentic intelligence practical, secure, and deployable.</p>
+			</div>
+			<div class="row g-4">
+				<div class="col-md-4">
+					<div class="premium-panel p-4 h-100">
+						<div class="section-icon mb-3"><i class="fas fa-bolt"></i></div>
+						<h5 class="mb-2">Systems-first visibility</h5>
+						<p class="mb-0 text-muted">Position your work in front of a community that cares about real deployment, edge constraints, and end-to-end architecture.</p>
+					</div>
+				</div>
+				<div class="col-md-4">
+					<div class="premium-panel p-4 h-100">
+						<div class="section-icon mb-3"><i class="fas fa-layer-group"></i></div>
+						<h5 class="mb-2">Broad cross-domain reach</h5>
+						<p class="mb-0 text-muted">PerAgents connects AI, edge systems, and applied domains such as health, agriculture, smart cities, and industrial automation.</p>
+					</div>
+				</div>
+				<div class="col-md-4">
+					<div class="premium-panel p-4 h-100">
+						<div class="section-icon mb-3"><i class="fas fa-comments"></i></div>
+						<h5 class="mb-2">Interactive discussion</h5>
+						<p class="mb-0 text-muted">The format prioritizes feedback, debate, and practical next steps rather than dense, one-way presentations.</p>
+					</div>
+				</div>
+			</div>
+			<div class="mt-4 premium-panel p-4 text-center">
+				<div class="fw-bold mb-2" style="font-size: 1.1rem; color: #0f172a;">Submit your best work on edge agents, multimodal systems, and distributed intelligence.</div>
+				<div class="text-muted">The venue is built to showcase emerging systems research and help early-stage ideas become publishable, visible, and collaborative.</div>
+			</div>
+		</div>
+	</section>
 
 	<!-- Program Section -->
 	<section id="program" class="schedule-section section theme-bg-light" style="padding-top: 60px; padding-bottom: 60px;">
@@ -241,17 +526,88 @@
 						</div>
 					</a>
 				</div>
+			<h3 class="section-heading text-center mb-5" style="font-weight: 700;">Publicity Chair</h3>			
+			<div class="row justify-content-center">
+				<div class="col-12 col-md-6 col-lg-3 text-center mb-4">
+					<a href="https://www.linkedin.com/in/keiwan-soltani/" target="_blank" class="card border-0 h-100 shadow-sm hover-card">
+						<div class="p-3"><img src="assets/images/keiwan.jpg" class="card-img-top profile-image rounded-circle mb-2 mx-auto" style="width: 130px; height: 130px; object-fit: cover; border: 3px solid #f1f5f9;" alt="Dr. Keiwan Soltani" onerror="this.src='data:image/svg+xml;utf8,<svg xmlns=\'http://www.w3.org/2000/svg\' viewBox=\'0 0 24 24\' fill=\'%23ccc\'><path d=\'M12 12c2.21 0 4-1.79 4-4s-1.79-4-4-4-4 1.79-4 4 1.79 4 4 4zm0 2c-2.67 0-8 1.34-8 4v2h16v-2c0-2.66-5-4-8-4z\'/></svg>'"></div>
+						<div class="card-body p-2">
+							<h5 class="card-title font-weight-bold mb-1" style="color: #0f172a;">Keiwan Soltani</h5>
+							<p class="small text-primary mb-2">Missouri University of Science and Technology</p>
+                            <span class="badge bg-light text-primary border border-secondary p-1" style="font-size: 0.7rem;">USA</span>
+						</div>
+					</a>
+				</div>	
 			</div>
 		</div>
 
-		<div class="container">
+		<div id="TPC" class="container">
             <br>
-			<h5 class="section-heading text-center mb-5" style="font-weight: 700;">Tentative Technical Program Committee</h3>
+			<h5 class="section-heading text-center mb-5" style="font-weight: 700;">Tentative Technical Program Committee</h5>
 			
 			<div class="row justify-content-center">
-
+								<!-- Keep -->
 				<div class="col-12 col-md-4 col-lg-3 text-center mb-4">
-					<a href="https://iitbhu.ac.in/dept/cse/people/ajaycse" target="_blank" class="card border-0 h-100 shadow-sm hover-card" style="background: solid #f1f5f9;">
+					<a href="https://pmanzoni.notion.site/Pietro-Manzoni-s-web-page-9e8aa06b0dbb4bb38cf190d9a2e6a842/" target="_blank" class="card border-0 h-100 shadow-sm hover-card" style="background: #f1f5f9;">
+						<div class="p-3">
+							<div class="mx-auto rounded-circle d-flex align-items-center justify-content-center" style="width:100px; height:110px; background: #ffffff; border: 1px solid #e2e8f0;">
+								<img src="assets/images/pietro.jpg" class="card-img-top profile-image rounded-circle mb-2 mx-auto" style="width: 110px; height: 110px; object-fit: cover;">
+							</div>
+						</div>
+						<div class="card-body p-2">
+							<h6 class="font-weight-bold mb-1" style="color: #1e293b;">Pietro Manzoni</h6>
+							<p class="small text-muted mb-1" style="font-size: 0.78rem; line-height: 1.3;">Universitat de Valencia</p>
+							<span class="badge bg-light text-primary border border-secondary p-1" style="font-size: 0.7rem;">Spain</span>
+						</div>
+					</a>
+				</div>
+				<div class="col-12 col-md-4 col-lg-3 text-center mb-4">
+					<a href="https://www.unibo.it/sitoweb/paolo.bellavista/en" target="_blank" class="card border-0 h-100 shadow-sm hover-card" style="background: #f1f5f9;">
+						<div class="p-3">
+							<div class="mx-auto rounded-circle d-flex align-items-center justify-content-center" style="width:100px; height:110px; background: #ffffff; border: 1px solid #e2e8f0;">
+								<img src="assets/images/paolo.jpg" class="card-img-top profile-image rounded-circle mb-2 mx-auto" style="width: 110px; height: 110px; object-fit: cover;">
+							</div>
+						</div>
+						<div class="card-body p-2">
+							<h6 class="font-weight-bold mb-1" style="color: #1e293b;">Paolo Bellavista</h6>
+							<p class="small text-muted mb-1" style="font-size: 0.78rem; line-height: 1.3;">University of Bologna</p>
+							<span class="badge bg-light text-primary border border-secondary p-1" style="font-size: 0.7rem;">Italy</span>
+						</div>
+					</a>
+				</div>
+				<div class="col-12 col-md-4 col-lg-3 text-center mb-4">
+					<a href="https://makautwb.ac.in/plug.php?e=WBUTtool&f=faculty_profile&user_id=38" target="_blank" class="card border-0 h-100 shadow-sm hover-card" style="background: #f1f5f9;">
+						<div class="p-3">
+							<div class="mx-auto rounded-circle d-flex align-items-center justify-content-center" style="width:100px; height:110px; background: #ffffff; border: 1px solid #e2e8f0;">
+								<img src="assets/images/suprna.jpg" class="card-img-top profile-image rounded-circle mb-2 mx-auto" style="width: 110px; height: 110px; object-fit: cover;">
+							</div>
+						</div>
+						<div class="card-body p-2">
+							<h6 class="font-weight-bold mb-1" style="color: #1e293b;">Suparna Biswas</h6>
+							<p class="small text-muted mb-1" style="font-size: 0.78rem; line-height: 1.3;">Maulana Abul Kalam Azad University of Technology</p>
+							<span class="badge bg-light text-primary border border-secondary p-1" style="font-size: 0.7rem;">India</span>
+						</div>
+					</a>
+				</div>
+				<div class="col-12 col-md-4 col-lg-3 text-center mb-4">
+					<a href="https://makautwb.ac.in/plug.php?e=WBUTtool&f=faculty_profile&user_id=36" target="_blank" class="card border-0 h-100 shadow-sm hover-card" style="background: #f1f5f9;">
+						<div class="p-3">
+							<div class="mx-auto rounded-circle d-flex align-items-center justify-content-center" style="width:100px; height:110px; background: #ffffff; border: 1px solid #e2e8f0;">
+								<img src="assets/images/debashis.jpg" class="card-img-top profile-image rounded-circle mb-2 mx-auto" style="width: 110px; height: 110px; object-fit: cover;">
+							</div>
+						</div>
+						<div class="card-body p-2">
+							<h6 class="font-weight-bold mb-1" style="color: #1e293b;">Debashis De</h6>
+							<p class="small text-muted mb-1" style="font-size: 0.78rem; line-height: 1.3;">Maulana Abul Kalam Azad University of Technology</p>
+							<span class="badge bg-light text-primary border border-secondary p-1" style="font-size: 0.7rem;">India</span>
+						</div>
+					</a>
+				</div>
+
+
+<!--
+				<div class="col-12 col-md-4 col-lg-3 text-center mb-4">
+					<a href="https://iitbhu.ac.in/dept/cse/people/ajaycse" target="_blank" class="card border-0 h-100 shadow-sm hover-card" style="background: #f1f5f9;">
 						<div class="p-3">
 							<div class="mx-auto rounded-circle d-flex align-items-center justify-content-center" style="width:100px; height:110px; background: #ffffff; border: 1px solid #e2e8f0;">
 								<img src="assets/images/ajay.jpg" class="card-img-top profile-image rounded-circle mb-2 mx-auto" style="width: 110px; height: 110px; object-fit: cover;">
@@ -266,7 +622,7 @@
 				</div>				
 
 				<div class="col-12 col-md-4 col-lg-3 text-center mb-4">
-					<a href="https://cs.mst.edu/" target="_blank" class="card border-0 h-100 shadow-sm hover-card" style="background: solid #f1f5f9;">
+					<a href="https://cs.mst.edu/" target="_blank" class="card border-0 h-100 shadow-sm hover-card" style="background: #f1f5f9;">
 						<div class="p-3">
 							<div class="mx-auto rounded-circle d-flex align-items-center justify-content-center" style="width:100px; height:110px; background: #ffffff; border: 1px solid #e2e8f0;">
 								<img src="assets/images/tpc_member.jpg" class="card-img-top profile-image rounded-circle mb-2 mx-auto" style="width: 110px; height: 110px; object-fit: cover;">
@@ -281,7 +637,7 @@
 				</div>
 				
 				<div class="col-12 col-md-4 col-lg-3 text-center mb-4">
-					<a href="https://findanexpert.unimelb.edu.au/profile/413184-aravinda-s.-rao" target="_blank" class="card border-0 h-100 shadow-sm hover-card" style="background: solid #f1f5f9;">
+					<a href="https://findanexpert.unimelb.edu.au/profile/413184-aravinda-s.-rao" target="_blank" class="card border-0 h-100 shadow-sm hover-card" style="background: #f1f5f9;">
 						<div class="p-3">
 							<div class="mx-auto rounded-circle d-flex align-items-center justify-content-center" style="width:100px; height:110px; background: #ffffff; border: 1px solid #e2e8f0;">
 								<img src="assets/images/aravinda.jpeg" class="card-img-top profile-image rounded-circle mb-2 mx-auto" style="width: 110px; height: 110px; object-fit: cover;">
@@ -295,7 +651,7 @@
 					</a>
 				</div>
 				<div class="col-12 col-md-4 col-lg-3 text-center mb-4">
-					<a href="https://www.bits-pilani.ac.in/pilani/ashish-gupta/" target="_blank" class="card border-0 h-100 shadow-sm hover-card" style="background: solid #f1f5f9;">
+					<a href="https://www.bits-pilani.ac.in/pilani/ashish-gupta/" target="_blank" class="card border-0 h-100 shadow-sm hover-card" style="background: #f1f5f9;">
 						<div class="p-3">
 							<div class="mx-auto rounded-circle d-flex align-items-center justify-content-center" style="width:100px; height:110px; background: #ffffff; border: 1px solid #e2e8f0;">
 								<img src="assets/images/ashish.jpg" class="card-img-top profile-image rounded-circle mb-2 mx-auto" style="width: 110px; height: 110px; object-fit: cover;">
@@ -309,7 +665,7 @@
 					</a>
 				</div>
 				<div class="col-12 col-md-4 col-lg-3 text-center mb-4">
-					<a href="https://web.eecs.utk.edu/~qcao1/" target="_blank" class="card border-0 h-100 shadow-sm hover-card" style="background: solid #f1f5f9;">
+					<a href="https://web.eecs.utk.edu/~qcao1/" target="_blank" class="card border-0 h-100 shadow-sm hover-card" style="background: #f1f5f9;">
 						<div class="p-3">
 							<div class="mx-auto rounded-circle d-flex align-items-center justify-content-center" style="width:100px; height:110px; background: #ffffff; border: 1px solid #e2e8f0;">
 								<img src="assets/images/charles.jpeg" class="card-img-top profile-image rounded-circle mb-2 mx-auto" style="width: 110px; height: 110px; object-fit: cover;">
@@ -322,23 +678,10 @@
 						</div>
 					</a>
 				</div>
-				<div class="col-12 col-md-4 col-lg-3 text-center mb-4">
-					<a href="https://makautwb.ac.in/plug.php?e=WBUTtool&f=faculty_profile&user_id=36" target="_blank" class="card border-0 h-100 shadow-sm hover-card" style="background: solid #f1f5f9;">
-						<div class="p-3">
-							<div class="mx-auto rounded-circle d-flex align-items-center justify-content-center" style="width:100px; height:110px; background: #ffffff; border: 1px solid #e2e8f0;">
-								<img src="assets/images/debashis.jpg" class="card-img-top profile-image rounded-circle mb-2 mx-auto" style="width: 110px; height: 110px; object-fit: cover;">
-							</div>
-						</div>
-						<div class="card-body p-2">
-							<h6 class="font-weight-bold mb-1" style="color: #1e293b;">Debashis De</h6>
-							<p class="small text-muted mb-1" style="font-size: 0.78rem; line-height: 1.3;">Maulana Abul Kalam Azad University of Technology</p>
-							<span class="badge bg-light text-primary border border-secondary p-1" style="font-size: 0.7rem;">India</span>
-						</div>
-					</a>
-				</div>
+
 				
 				<div class="col-12 col-md-4 col-lg-3 text-center mb-4">
-					<a href="https://coe.northeastern.edu/people/restuccia-francesco/" target="_blank" class="card border-0 h-100 shadow-sm hover-card" style="background: solid #f1f5f9;">
+					<a href="https://coe.northeastern.edu/people/restuccia-francesco/" target="_blank" class="card border-0 h-100 shadow-sm hover-card" style="background: #f1f5f9;">
 						<div class="p-3">
 							<div class="mx-auto rounded-circle d-flex align-items-center justify-content-center" style="width:100px; height:110px; background: #ffffff; border: 1px solid #e2e8f0;">
 								<img src="assets/images/restuccia.jpg" class="card-img-top profile-image rounded-circle mb-2 mx-auto" style="width: 110px; height: 110px; object-fit: cover;">
@@ -352,7 +695,7 @@
 					</a>
 				</div>
 				<div class="col-12 col-md-4 col-lg-3 text-center mb-4">
-					<a href="https://sites.google.com/site/hprabhatgupta/home?authuser=0" target="_blank" class="card border-0 h-100 shadow-sm hover-card" style="background: solid #f1f5f9;">
+					<a href="https://sites.google.com/site/hprabhatgupta/home?authuser=0" target="_blank" class="card border-0 h-100 shadow-sm hover-card" style="background: #f1f5f9;">
 						<div class="p-3">
 							<div class="mx-auto rounded-circle d-flex align-items-center justify-content-center" style="width:100px; height:110px; background: #ffffff; border: 1px solid #e2e8f0;">
 								<img src="assets/images/hari.jpg" class="card-img-top profile-image rounded-circle mb-2 mx-auto" style="width: 110px; height: 110px; object-fit: cover;">
@@ -366,7 +709,7 @@
 					</a>
 				</div>
 				<div class="col-12 col-md-4 col-lg-3 text-center mb-4">
-					<a href="https://www.green.shizuoka.ac.jp/staff_en/082/" target="_blank" class="card border-0 h-100 shadow-sm hover-card" style="background: solid #f1f5f9;">
+					<a href="https://www.green.shizuoka.ac.jp/staff_en/082/" target="_blank" class="card border-0 h-100 shadow-sm hover-card" style="background: #f1f5f9;">
 						<div class="p-3">
 							<div class="mx-auto rounded-circle d-flex align-items-center justify-content-center" style="width:100px; height:110px; background: #ffffff; border: 1px solid #e2e8f0;">
 								<img src="assets/images/hiroshi.jpg" class="card-img-top profile-image rounded-circle mb-2 mx-auto" style="width: 110px; height: 110px; object-fit: cover;">
@@ -380,7 +723,7 @@
 					</a>
 				</div>
 				<div class="col-12 col-md-4 col-lg-3 text-center mb-4">
-					<a href="https://faculty.eng.ufl.edu/jiexu/" target="_blank" class="card border-0 h-100 shadow-sm hover-card" style="background: solid #f1f5f9;">
+					<a href="https://faculty.eng.ufl.edu/jiexu/" target="_blank" class="card border-0 h-100 shadow-sm hover-card" style="background: #f1f5f9;">
 						<div class="p-3">
 							<div class="mx-auto rounded-circle d-flex align-items-center justify-content-center" style="width:100px; height:110px; background: #ffffff; border: 1px solid #e2e8f0;">
 								<img src="assets/images/jie.jpg" class="card-img-top profile-image rounded-circle mb-2 mx-auto" style="width: 110px; height: 110px; object-fit: cover;">
@@ -394,7 +737,7 @@
 					</a>
 				</div>
 				<div class="col-12 col-md-4 col-lg-3 text-center mb-4">
-					<a href="https://siebelschool.illinois.edu/about/people/faculty/klara" target="_blank" class="card border-0 h-100 shadow-sm hover-card" style="background: solid #f1f5f9;">
+					<a href="https://siebelschool.illinois.edu/about/people/faculty/klara" target="_blank" class="card border-0 h-100 shadow-sm hover-card" style="background: #f1f5f9;">
 						<div class="p-3">
 							<div class="mx-auto rounded-circle d-flex align-items-center justify-content-center" style="width:100px; height:110px; background: #ffffff; border: 1px solid #e2e8f0;">
 								<img src="assets/images/klara.jpeg" class="card-img-top profile-image rounded-circle mb-2 mx-auto" style="width: 110px; height: 110px; object-fit: cover;">
@@ -408,7 +751,7 @@
 					</a>
 				</div>
 				<div class="col-12 col-md-4 col-lg-3 text-center mb-4">
-					<a href="https://www.cs.sjtu.edu.cn/~linghe.kong/" target="_blank" class="card border-0 h-100 shadow-sm hover-card" style="background: solid #f1f5f9;">
+					<a href="https://www.cs.sjtu.edu.cn/~linghe.kong/" target="_blank" class="card border-0 h-100 shadow-sm hover-card" style="background: #f1f5f9;">
 						<div class="p-3">
 							<div class="mx-auto rounded-circle d-flex align-items-center justify-content-center" style="width:100px; height:110px; background: #ffffff; border: 1px solid #e2e8f0;">
 								<img src="assets/images/linghe.jpg" class="card-img-top profile-image rounded-circle mb-2 mx-auto" style="width: 110px; height: 110px; object-fit: cover;">
@@ -422,7 +765,7 @@
 					</a>
 				</div>
 				<div class="col-12 col-md-4 col-lg-3 text-center mb-4">
-					<a href="https://findanexpert.unimelb.edu.au/profile/16503-marimuthu-palaniswami" target="_blank" class="card border-0 h-100 shadow-sm hover-card" style="background: solid #f1f5f9;">
+					<a href="https://findanexpert.unimelb.edu.au/profile/16503-marimuthu-palaniswami" target="_blank" class="card border-0 h-100 shadow-sm hover-card" style="background: #f1f5f9;">
 						<div class="p-3">
 							<div class="mx-auto rounded-circle d-flex align-items-center justify-content-center" style="width:100px; height:110px; background: #ffffff; border: 1px solid #e2e8f0;">
 								<img src="assets/images/marimuthu.jpg" class="card-img-top profile-image rounded-circle mb-2 mx-auto" style="width: 110px; height: 110px; object-fit: cover;">
@@ -436,7 +779,7 @@
 					</a>
 				</div>
 				<div class="col-12 col-md-4 col-lg-3 text-center mb-4">
-					<a href="https://lab.vanderbilt.edu/live/person/meiyi-ma/" target="_blank" class="card border-0 h-100 shadow-sm hover-card" style="background: solid #f1f5f9;">
+					<a href="https://lab.vanderbilt.edu/live/person/meiyi-ma/" target="_blank" class="card border-0 h-100 shadow-sm hover-card" style="background: #f1f5f9;">
 						<div class="p-3">
 							<div class="mx-auto rounded-circle d-flex align-items-center justify-content-center" style="width:100px; height:110px; background: #ffffff; border: 1px solid #e2e8f0;">
 								<img src="assets/images/meiyi.jpg" class="card-img-top profile-image rounded-circle mb-2 mx-auto" style="width: 110px; height: 110px; object-fit: cover;">
@@ -450,7 +793,7 @@
 					</a>
 				</div>
 				<div class="col-12 col-md-4 col-lg-3 text-center mb-4">
-					<a href="https://people.njit.edu/profile/zhou" target="_blank" class="card border-0 h-100 shadow-sm hover-card" style="background: solid #f1f5f9;">
+					<a href="https://people.njit.edu/profile/zhou" target="_blank" class="card border-0 h-100 shadow-sm hover-card" style="background: #f1f5f9;">
 						<div class="p-3">
 							<div class="mx-auto rounded-circle d-flex align-items-center justify-content-center" style="width:100px; height:110px; background: #ffffff; border: 1px solid #e2e8f0;">
 								<img src="assets/images/mengchu.jpg" class="card-img-top profile-image rounded-circle mb-2 mx-auto" style="width: 110px; height: 110px; object-fit: cover;">
@@ -464,7 +807,7 @@
 					</a>
 				</div>
 				<div class="col-12 col-md-4 col-lg-3 text-center mb-4">
-					<a href="https://www2.scut.edu.cn/cs_en/2025/1016/c45160a605567/page.htm" target="_blank" class="card border-0 h-100 shadow-sm hover-card" style="background: solid #f1f5f9;">
+					<a href="https://www2.scut.edu.cn/cs_en/2025/1016/c45160a605567/page.htm" target="_blank" class="card border-0 h-100 shadow-sm hover-card" style="background: #f1f5f9;">
 						<div class="p-3">
 							<div class="mx-auto rounded-circle d-flex align-items-center justify-content-center" style="width:100px; height:110px; background: #ffffff; border: 1px solid #e2e8f0;">
 								<img src="assets/images/min.jpg" class="card-img-top profile-image rounded-circle mb-2 mx-auto" style="width: 110px; height: 110px; object-fit: cover;">
@@ -477,36 +820,9 @@
 						</div>
 					</a>
 				</div>
+
 				<div class="col-12 col-md-4 col-lg-3 text-center mb-4">
-					<a href="https://www.unibo.it/sitoweb/paolo.bellavista/en" target="_blank" class="card border-0 h-100 shadow-sm hover-card" style="background: solid #f1f5f9;">
-						<div class="p-3">
-							<div class="mx-auto rounded-circle d-flex align-items-center justify-content-center" style="width:100px; height:110px; background: #ffffff; border: 1px solid #e2e8f0;">
-								<img src="assets/images/paolo.jpg" class="card-img-top profile-image rounded-circle mb-2 mx-auto" style="width: 110px; height: 110px; object-fit: cover;">
-							</div>
-						</div>
-						<div class="card-body p-2">
-							<h6 class="font-weight-bold mb-1" style="color: #1e293b;">Paolo Bellavista</h6>
-							<p class="small text-muted mb-1" style="font-size: 0.78rem; line-height: 1.3;">University of Bologna</p>
-							<span class="badge bg-light text-primary border border-secondary p-1" style="font-size: 0.7rem;">Italy</span>
-						</div>
-					</a>
-				</div>
-				<div class="col-12 col-md-4 col-lg-3 text-center mb-4">
-					<a href="https://pmanzoni.notion.site/Pietro-Manzoni-s-web-page-9e8aa06b0dbb4bb38cf190d9a2e6a842/" target="_blank" class="card border-0 h-100 shadow-sm hover-card" style="background: solid #f1f5f9;">
-						<div class="p-3">
-							<div class="mx-auto rounded-circle d-flex align-items-center justify-content-center" style="width:100px; height:110px; background: #ffffff; border: 1px solid #e2e8f0;">
-								<img src="assets/images/pietro.jpg" class="card-img-top profile-image rounded-circle mb-2 mx-auto" style="width: 110px; height: 110px; object-fit: cover;">
-							</div>
-						</div>
-						<div class="card-body p-2">
-							<h6 class="font-weight-bold mb-1" style="color: #1e293b;">Pietro Manzoni</h6>
-							<p class="small text-muted mb-1" style="font-size: 0.78rem; line-height: 1.3;">Universitat de Valencia</p>
-							<span class="badge bg-light text-primary border border-secondary p-1" style="font-size: 0.7rem;">Spain</span>
-						</div>
-					</a>
-				</div>
-				<div class="col-12 col-md-4 col-lg-3 text-center mb-4">
-					<a href="https://www.linkedin.com/in/robertominerva/" target="_blank" class="card border-0 h-100 shadow-sm hover-card" style="background: solid #f1f5f9;">
+					<a href="https://www.linkedin.com/in/robertominerva/" target="_blank" class="card border-0 h-100 shadow-sm hover-card" style="background: #f1f5f9;">
 						<div class="p-3">
 							<div class="mx-auto rounded-circle d-flex align-items-center justify-content-center" style="width:100px; height:110px; background: #ffffff; border: 1px solid #e2e8f0;">
 								<img src="assets/images/roberto.jpeg" class="card-img-top profile-image rounded-circle mb-2 mx-auto" style="width: 110px; height: 110px; object-fit: cover;">
@@ -520,7 +836,7 @@
 					</a>
 				</div>
 				<div class="col-12 col-md-4 col-lg-3 text-center mb-4">
-					<a href="https://www.iitg.ac.in/cse/internet-pages/satyajit.das" target="_blank" class="card border-0 h-100 shadow-sm hover-card" style="background: solid #f1f5f9;">
+					<a href="https://www.iitg.ac.in/cse/internet-pages/satyajit.das" target="_blank" class="card border-0 h-100 shadow-sm hover-card" style="background: #f1f5f9;">
 						<div class="p-3">
 							<div class="mx-auto rounded-circle d-flex align-items-center justify-content-center" style="width:100px; height:110px; background: #ffffff; border: 1px solid #e2e8f0;">
 								<img src="assets/images/satyajit.jpeg" class="card-img-top profile-image rounded-circle mb-2 mx-auto" style="width: 110px; height: 110px; object-fit: cover;">
@@ -534,7 +850,7 @@
 					</a>
 				</div>
 				<div class="col-12 col-md-4 col-lg-3 text-center mb-4">
-					<a href="https://cse.umn.edu/cs/shashi-shekhar" target="_blank" class="card border-0 h-100 shadow-sm hover-card" style="background: solid #f1f5f9;">
+					<a href="https://cse.umn.edu/cs/shashi-shekhar" target="_blank" class="card border-0 h-100 shadow-sm hover-card" style="background: #f1f5f9;">
 						<div class="p-3">
 							<div class="mx-auto rounded-circle d-flex align-items-center justify-content-center" style="width:100px; height:110px; background: #ffffff; border: 1px solid #e2e8f0;">
 								<img src="assets/images/shashi.jpg" class="card-img-top profile-image rounded-circle mb-2 mx-auto" style="width: 110px; height: 110px; object-fit: cover;">
@@ -548,7 +864,7 @@
 					</a>
 				</div>
 				<div class="col-12 col-md-4 col-lg-3 text-center mb-4">
-					<a href="https://silvestri.engr.uky.edu/" target="_blank" class="card border-0 h-100 shadow-sm hover-card" style="background: solid #f1f5f9;">
+					<a href="https://silvestri.engr.uky.edu/" target="_blank" class="card border-0 h-100 shadow-sm hover-card" style="background: #f1f5f9;">
 						<div class="p-3">
 							<div class="mx-auto rounded-circle d-flex align-items-center justify-content-center" style="width:100px; height:110px; background: #ffffff; border: 1px solid #e2e8f0;">
 								<img src="assets/images/simone.jpg" class="card-img-top profile-image rounded-circle mb-2 mx-auto" style="width: 110px; height: 110px; object-fit: cover;">
@@ -562,7 +878,7 @@
 					</a>
 				</div>
 				<div class="col-12 col-md-4 col-lg-3 text-center mb-4">
-					<a href="https://iitpkd.ac.in/people/sreenath" target="_blank" class="card border-0 h-100 shadow-sm hover-card" style="background: solid #f1f5f9;">
+					<a href="https://iitpkd.ac.in/people/sreenath" target="_blank" class="card border-0 h-100 shadow-sm hover-card" style="background: #f1f5f9;">
 						<div class="p-3">
 							<div class="mx-auto rounded-circle d-flex align-items-center justify-content-center" style="width:100px; height:110px; background: #ffffff; border: 1px solid #e2e8f0;">
 								<img src="assets/images/sreenath.jpg" class="card-img-top profile-image rounded-circle mb-2 mx-auto" style="width: 110px; height: 110px; object-fit: cover;">
@@ -575,23 +891,9 @@
 						</div>
 					</a>
 				</div>
-				
+
 				<div class="col-12 col-md-4 col-lg-3 text-center mb-4">
-					<a href="https://makautwb.ac.in/plug.php?e=WBUTtool&f=faculty_profile&user_id=38" target="_blank" class="card border-0 h-100 shadow-sm hover-card" style="background: solid #f1f5f9;">
-						<div class="p-3">
-							<div class="mx-auto rounded-circle d-flex align-items-center justify-content-center" style="width:100px; height:110px; background: #ffffff; border: 1px solid #e2e8f0;">
-								<img src="assets/images/suprna.jpg" class="card-img-top profile-image rounded-circle mb-2 mx-auto" style="width: 110px; height: 110px; object-fit: cover;">
-							</div>
-						</div>
-						<div class="card-body p-2">
-							<h6 class="font-weight-bold mb-1" style="color: #1e293b;">Suparna Biswas</h6>
-							<p class="small text-muted mb-1" style="font-size: 0.78rem; line-height: 1.3;">Maulana Abul Kalam Azad University of Technology</p>
-							<span class="badge bg-light text-primary border border-secondary p-1" style="font-size: 0.7rem;">India</span>
-						</div>
-					</a>
-				</div>
-				<div class="col-12 col-md-4 col-lg-3 text-center mb-4">
-					<a href="http://www.cssclab.cn/xjkong/" target="_blank" class="card border-0 h-100 shadow-sm hover-card" style="background: solid #f1f5f9;">
+					<a href="http://www.cssclab.cn/xjkong/" target="_blank" class="card border-0 h-100 shadow-sm hover-card" style="background: #f1f5f9;">
 						<div class="p-3">
 							<div class="mx-auto rounded-circle d-flex align-items-center justify-content-center" style="width:100px; height:110px; background: #ffffff; border: 1px solid #e2e8f0;">
 								<img src="assets/images/xianjie.jpg" class="card-img-top profile-image rounded-circle mb-2 mx-auto" style="width: 110px; height: 110px; object-fit: cover;">
@@ -607,7 +909,7 @@
 				</div>
 				
 				<div class="col-12 col-md-4 col-lg-3 text-center mb-4">
-					<a href="https://cds.iisc.ac.in/faculty/simmhan/" target="_blank" class="card border-0 h-100 shadow-sm hover-card" style="background: solid #f1f5f9;">
+					<a href="https://cds.iisc.ac.in/faculty/simmhan/" target="_blank" class="card border-0 h-100 shadow-sm hover-card" style="background: #f1f5f9;">
 						<div class="p-3">
 							<div class="mx-auto rounded-circle d-flex align-items-center justify-content-center" style="width:100px; height:110px; background: #ffffff; border: 1px solid #e2e8f0;">
 								<img src="assets/images/yogesh.jpg" class="card-img-top profile-image rounded-circle mb-2 mx-auto" style="width: 110px; height: 110px; object-fit: cover;">
@@ -620,13 +922,13 @@
 						</div>
 					</a>
 				</div>
-			</div></div></section>
+			-->
+			</div></section>
 	<footer class="footer py-3 theme-bg-primary">
 		<div class="container text-center">
 			<small class="copyright" style="color:rgba(255, 255, 255, 0.75);">PerAgents 2027 Workshop | Co-located with PerCom 2027</small><br>
             <small class="copyright">Designed with <i class="fas fa-heart" style="color: #EC645E;"></i> by <a href="http://themes.3rdwavemedia.com" target="_blank">Xiaoying Riley</a> for developers</small>
 		</div><!--//container-->	    
-		</div>
 	</footer>
 	
 	<script src="assets/plugins/popper.min.js"></script>
